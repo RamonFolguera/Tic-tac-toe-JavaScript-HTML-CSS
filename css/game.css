@@ -1,0 +1,26 @@
+
+.board {
+    background-color: burlywood;
+    height: 420px;
+    width: 420px;
+    margin-top: 150px;
+}
+.box {
+    height: 135px;
+    box-shadow: 0px 0px 5px 5px inset;
+    border-style: solid;
+    border-color: burlywood;
+}
+
+.row-1 {
+    height:405px;
+    width: 405px;
+
+}
+
+
+
+
+
+
+
