@@ -1,1 +1,4 @@
-# rfc-geekshubs-fsd-val-proyecto3-12022023
+# Proyecto 3 - Tic Tac Toe.
+
+Emular el juego del tres en raya con JS.
+
