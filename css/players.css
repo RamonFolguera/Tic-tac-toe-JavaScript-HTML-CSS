@@ -21,7 +21,7 @@
     height: 60%;
 }
 
-.player-1-token, .player-2-token {
+.player-token-1, .player-token-2, .player-token-3, .player-token-4  {
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
@@ -29,12 +29,31 @@
     width: 25%;
 }
 
-.player-1-token{ 
-    background-image: url(../img/x-token.png);
+.player-2-input, .player-1-input {
+    font-family: sans-serif;
 }
 
-.player-2-token {
-    background-image: url(../img/o-token.png);
+.player-token-1{ 
+    background-image: url(../img/cocodrile.png);
+}
+
+.player-token-2 {
+    background-image: url(../img/elephant.png);
+}
+
+
+.player-token-3 {
+    background-image: url(../img/monkey.png);
+}
+
+
+.player-token-4 {
+    background-image: url(../img/hipo.png);
+}
+
+.player-token-1:hover, .player-token-2:hover, .player-token-3:hover, .player-token-4:hover  {
+    transform: scale(200%);
+    transition: 2s;
 }
 
 .start-button {
@@ -45,4 +64,14 @@
     border-radius: 5px;
     text-decoration: none;
 }
+
+.start-button:hover {
+    background-color: white;
+    color: rgb(192, 121, 121);
+}
+
+.start-button:active {
+    box-shadow: none;
+}
+
 

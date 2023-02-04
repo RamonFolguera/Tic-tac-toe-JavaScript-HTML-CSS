@@ -3,6 +3,18 @@ body {
     margin: 0;
     padding: 0;
     background-color: rgb(245, 219, 219);
+    font-family: 'DOCK11';
+    font-weight: Heavy;
+}
+
+@font-face {
+    font-family: 'DOCK11';
+    src: url('fonts/heavydock11.eot');
+    src: url('fonts/heavydock11.eot?#iefix') format('embedded-opentype'),
+        url('fonts/heavydock11.woff2') format('woff2'),
+        url('fonts/heavydock11.woff') format('woff'),
+        url('fonts/heavydock11.ttf')  format('truetype'),
+        url('fonts/heavydock11.svg#DOCK11') format('svg');
 }
 
 .main-box {
@@ -83,7 +95,6 @@ body {
 .p-1 {
     background-color: rgb(130, 127, 118, 0.5);
     box-shadow: 1px 1px 1px 1px black inset;
-    font-family: 'Jennie on the Block', sans-serif;
     color: rgb(130, 127, 118, 0.5);
     text-shadow: 0px 1px 0px rgb(0, 0, 0);
 } 
