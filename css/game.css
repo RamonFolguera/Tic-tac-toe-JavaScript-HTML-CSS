@@ -1,15 +1,15 @@
 
 .board {
     background-color: burlywood;
-    height: 450px;
-    width: 450px;
-    margin-top: 150px;
+    height: 90vh;
+    width: 50%;
+    margin-top: 30px;
     border-radius: 30px;
     box-shadow: 2px 2px 10px 1px black;
 }
 .box {
     background-color: rgb(252, 224, 189);
-    height: 135px;
+    height: 32%;
     box-shadow: 1px 1px 3px 2px inset;
     border: 5px;
     border-style: solid;
@@ -34,8 +34,8 @@
 
 
 .row-1 {
-    height:405px;
-    width: 405px;
+    height: 85vh;
+    width: 90%;
 }
 
 
