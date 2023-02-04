@@ -51,7 +51,7 @@ body {
     
 }
 
-.start {
+.start-container {
     position:absolute;
     top: 0;
     left: 0;
@@ -63,18 +63,19 @@ body {
     border: none;
     background: none;
 }
-.start button {
+.go-to-player-select-btn {
     background: none;
     border: none;
     background-image: url(../img/start-button.png);
     background-size: contain;
     background-repeat: no-repeat;
     transition-property: transform;
-    height: 50px;
-    width: 50px;
+    height: 100px;
+    width: 100px;
+    cursor: pointer;
 }
 
-.start button:hover {
+.start-container .go-to-player-select-btn:hover {
     transform: rotate(180deg);
     transition-duration: 6s;
 } 
