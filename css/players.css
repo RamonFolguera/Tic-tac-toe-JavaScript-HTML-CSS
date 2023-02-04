@@ -1,0 +1,4 @@
+.title-container, .player-1-container, .player-2-container {
+    height: 35%;
+    border-style: dotted;
+}

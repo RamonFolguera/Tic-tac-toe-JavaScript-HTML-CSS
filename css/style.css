@@ -6,7 +6,7 @@ body {
 }
 
 .main-box {
-    margin-top: 150px;
+    margin-top: 50px;
 }
 
 .box-flap {
@@ -38,7 +38,6 @@ body {
     position: relative;
     height: 100px;
     width: 100px;
-    background-color: black;
     z-index: 1;
     border-radius: 50%;
 }
