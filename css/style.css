@@ -7,47 +7,83 @@ body {
 
 .main-box {
     margin-top: 50px;
+    height: 90%;
+    width: 90%;
+    background-image: url(../img/board.JPG);
+    background-size: contain;
+    position: relative;
+
 }
 
 .box-flap {
-    height: 202.5px;
-    background-image: url(../img/Wood_a001_color.jpg);
-    background-size: contain;
+    transition-property: transform;
+    height: 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
 }
 
 .box-flap-1 {
+    background-image: url(../img/cover-top.jpg);
     border-bottom: 1px;
     border-bottom-style: solid;
 }
 
 .box-flap-2 {
+    background-image: url(../img/cover-bottom.jpg);
     border-top: 1px;
     border-top-style: solid;
 }
 
+.box-flap-1:hover {
+    transform: translateY(-100px);
+    transition-duration: 1s;
+}
+
+.box-flap-2:hover {
+    transform: translateY(100px);
+    transition-duration: 1s;
+}
+
 .row-1 {
-    width: 405px;
+    height: 100%;
+    width: 100%;
+    
 }
 
 .start {
-    background-image: url(../img/button.png);
-    background-size: contain;
-    transition-property: transform;
-    left: 40%;
-    top: -50%;
-    position: relative;
-    height: 100px;
-    width: 100px;
+    position:absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
     z-index: 1;
     border-radius: 50%;
+    border-style: none;
+    border: none;
+    background: none;
+}
+.start button {
+    background: none;
+    border: none;
+    background-image: url(../img/start-button.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    transition-property: transform;
+    height: 50px;
+    width: 50px;
+    position: absolute;
+    top: 50%;
+    left:50%;
+
 }
 
-.start:hover {
+.start button:hover {
     transform: rotate(180deg);
     transition-duration: 6s;
 } 
 
-span {
+.p-1 {
     background-color: rgb(130, 127, 118, 0.5);
     box-shadow: 1px 1px 1px 1px black inset;
     font-family: 'Jennie on the Block', sans-serif;
@@ -56,5 +92,11 @@ span {
 } 
 
 
-
+@media (min-width: 576px) {
+    .main-box {
+        margin-top: 50px;
+        height: 90vh;
+        width: 50%;
+    }
+}
 
