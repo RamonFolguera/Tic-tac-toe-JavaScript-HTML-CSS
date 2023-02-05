@@ -19,11 +19,10 @@ body {
 
 .main-box {
     margin-top: 50px;
-    height: 90%;
+    height: 70vh;
     width: 90%;
     background-image: url(../img/board.JPG);
     background-size: contain;
-    position: relative;
 
 }
 
@@ -35,26 +34,39 @@ body {
     background-position: center;
 }
 
+.main-box::after {
+    position:absolute;
+    height: 800px;
+    width: 800px;
+    box-shadow: 2px 2px 5px 5px black;
+}
+
 .box-flap-1 {
-    background-image: url(../img/cover-top.jpg);
+    background-image: url(../img/jumanji-top-cover.png);
     border-bottom: 1px;
     border-bottom-style: solid;
 }
 
 .box-flap-2 {
-    background-image: url(../img/cover-bottom.jpg);
+    background-image: url(../img/jumanji-bottom-cover2.png);
     border-top: 1px;
     border-top-style: solid;
 }
 
 .box-flap-1:hover {
-    transform: translateY(-100px);
-    transition-duration: 1s;
+    transform: rotateX(45deg);
+    transform-origin: center top;
+    transition-duration: 2s;
+    /* transform: translateY(-100px);
+    transition-duration: 1s; */
 }
 
 .box-flap-2:hover {
-    transform: translateY(100px);
-    transition-duration: 1s;
+    transform: rotateX(45deg);
+    transform-origin: center bottom;
+    transition-duration: 2s;
+    /* transform: rotate(100px);
+    transition-duration: 1s; */
 }
 
 .row-1 {
@@ -63,7 +75,7 @@ body {
     
 }
 
-.start-container {
+/* .start-container {
     position:absolute;
     top: 0;
     left: 0;
@@ -85,12 +97,12 @@ body {
     height: 100px;
     width: 100px;
     cursor: pointer;
-}
+} */
 
-.start-container .go-to-player-select-btn:hover {
+/* .start-container .go-to-player-select-btn:hover {
     transform: rotate(180deg);
     transition-duration: 6s;
-} 
+}  */
 
 .p-1 {
     background-color: rgb(130, 127, 118, 0.5);

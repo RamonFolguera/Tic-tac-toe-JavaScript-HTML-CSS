@@ -11,30 +11,34 @@
     <title>Tic Tac Toe</title>
 </head>
 <body>
+    <audio id="drums-sound" autoplay>
+        <source src="./audio/Jumanji - Drums.mp3"></source>
+    </audio>
+    <!-- Main container. Simulating a gameboard closed box -->
     <div class="container-fluid main-box d-flex justify-content-center">
         <div class="row row-1">
-
-            <div class="col-12 box-flap box-flap-1 d-flex justify-content-start align-items-start pt-3 me-0 me-lg-5 ms-lg-2 ms-0">
+        
+            <a href="./pages/players.html" class="col-12 box-flap box-flap-1 d-flex justify-content-start align-items-start pt-3 me-0 me-lg-5 ms-lg-2 ms-0">
                 <div class="text-start ">
                     <p><span class="p-1">WELCOME TO MY TIC TAC TOE</span></p>
                     <p><span class="p-1">TO START THE GAME, OPEN THE BOX´S LOCK</span></p>
                 </div>
                 
-            </div>
-            <div class="col-12 box-flap box-flap-2 d-flex align-items-end justify-content-end me-0 me-lg-5 ms-lg-2 ms-0">
+            </a>
+            <a href="./pages/players.html" class="col-12 box-flap box-flap-2 d-flex align-items-end justify-content-end me-0 me-lg-5 ms-lg-2 ms-0">
                 <div class="text-end depth">
                     <p><span class="p-1">THIS GAME BELONGS TO RAMON FOLGUERA</span></p>
                     <p><span class="p-1">FEEL FREE TO PLAY ANYTIME</span></p>
                 </div>
-            </div>
-            <div class="start-container d-flex justify-content-center align-items-center">
+            </a>
+            <!-- <div class="start-container d-flex justify-content-center align-items-center">
                 <a class="go-to-player-select-btn" href="./pages/players.html"></a>
-            </div>
+            </div> -->
             
 
         </div>
     </div>
 
-    <script src=""></script>
+    <script src="./js/main.js"></script>
 </body>
 </html>

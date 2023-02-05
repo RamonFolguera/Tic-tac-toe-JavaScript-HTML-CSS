@@ -1,9 +1,16 @@
 body {
     display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
 }
 
+.left-section-text, .right-section-text {
+    display:none;
+}
 
-.board {
+/* .board {
     background-image: url(../img/Wood_a001_color.jpg);
     background-size: contain;
     height: 90vh;
@@ -11,16 +18,20 @@ body {
     margin-top: 30px;
     border-radius: 30px;
     box-shadow: 2px 2px 10px 1px black, 1px 1px 2px 2px rgb(0, 0, 0, 0.5) inset;
-}
+} */
 
 .row-1 {
     border-radius: 5px;
     border: 1px solid black;
-    height: 85vh;
-    width: 80%;
+    height: 45vh;
+    width: 300px;
     box-shadow: 1px 1px 2px 2px rgb(0, 0, 0, 0.5) inset;
     background-image: linear-gradient(rgba(255, 255, 255, 0.2),
     rgba(255, 255, 255, 0.2)), url("../img/Wood_a001_color.jpg");
+}
+
+.left-section, .right-section {
+    border: 5px black solid;
 }
 
 .box {
@@ -51,30 +62,16 @@ body {
     border-bottom-right-radius: 10px;
 }
 
-.x-token, .o-token {
-    height: 90%;
-    width: 90%;
-}
-
 /* .x-token, .o-token {
     background-repeat: no-repeat;
     background-position: center;
     background-size: 90%;
 } */
 
-/* .x-token {
-    background-image: url(../img/x-token.png);
-}
-
-.o-token {
-    background-image: url(../img/o-token.png);
-} */
-
 /* Section to both sides of the board to show players turns and some more info */
 
 .left-section, .right-section {
     height: 100%;
-    width: 400px;
 }
 
 .player-1-turn, .player-2-turn {
@@ -83,5 +80,36 @@ body {
     border: 2px solid yellow;
 }
 
+@media (min-width:576px) {
+    body {
+        display:flex;
+        align-items: center;
+        flex-direction: row;
+        justify-content: space-between;
+        height: 90vh;
+        
+    }
+    .board {
+        width: 600px;
+    }
+    .row-1 {
+        border-radius: 5px;
+        border: 1px solid black;
+        height: 85vh;
+        width: 600px;
+        box-shadow: 1px 1px 2px 2px rgb(0, 0, 0, 0.5) inset;
+        background-image: linear-gradient(rgba(255, 255, 255, 0.2),
+        rgba(255, 255, 255, 0.2)), url("../img/Wood_a001_color.jpg");
+    }
 
+    .left-section, .right-section {
+        width: 335px;
+        height: 85vh;
+    }
+
+    .left-section-text, .right-section-text {
+        display:block;
+    }
+
+}
 

@@ -11,21 +11,23 @@
     <title>Tic Tac Toe - board</title>
 </head>
 <body>
-   
-    <div class="container-fluid board d-flex justify-content-between align-items-center">
-        <div class=" left-section">
-            <p>PLAYER 1:<span class="player1-name-placeholder"></span></p>
-            <div class="player-1-turn"></div>
+    <div class="container left-section mt-lg-5 ms-lg-5 me-lg-0">
+        <p>PLAYER 1:<span class="player1-name-placeholder"></span></p>
+        <div class="player-1-turn"></div>
+        <div class="left-section-text"> 
             <p>TIC TAC TOE</p>
             <p>A GAME FOR THOSE WHO SEEK TO FIND</p>
             <p>A WAY TO LEAVE THEIR WORLD BEHIND</p>
             <p>YOU PLACE YOUR PIECE WHEN IT IS YOUT TURN</p>
             <p>WHEN YOU PLACED YOUR THREE TAKE ONE AND TRY ANOTHER TIME</p>
         </div>
+    </div>
+    <div class="container board d-flex justify-content-center align-items-center mt-lg-5">
+      
         <div class="row row-1 d-flex justify-content-center align-items-center">
          
             <div class="col-4 box box-1-1 d-flex justify-content-center align-items-center">
-                <img class= "token" src="../img/monkey.png" alt="token">
+                <!-- <img class= "monkey-token" src="../img/monkey.png" alt="Monkey token"> -->
             </div>
             <div class="col-4 box box-1-2 d-flex justify-content-center align-items-center">
                 <!-- <img class= "o-token" src="../img/o-token.png" alt="o-token"> -->
@@ -53,11 +55,14 @@
            
 
         </div>
-        <div class=" right-section">
-            <p>PLAYER 2:<span class="player2-name-placeholder"></span></p>
-            <div class="player-2-turn">
-               
-            </div>
+      
+    </div>
+    <div class="container right-section mt-lg-5 me-lg-5 ms-lg-0">
+        <p>PLAYER 2:<span class="player2-name-placeholder"></span></p>
+        <div class="player-2-turn">
+           
+        </div>
+        <div class="left-section-text"> 
             <p>ADVENTURERS BEWARE:</p>
             <p>DO NOT BEGIN UNLESS YOU INTEND TO FINISH</p>
             <p>THE EXCITING CONSEQUENCES OF THE GAME</p>
@@ -66,7 +71,6 @@
             <p>AND CALLED OUT ITS NAME</p>
         </div>
     </div>
-
     <script src="../js/game.js"></script>
 </body>
 </html>

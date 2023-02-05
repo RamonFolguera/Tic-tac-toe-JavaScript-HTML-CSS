@@ -1,5 +1,15 @@
-//Getting players name from Inputs
+//Adding drums sound effect from Jumanji when hovering over the boardgame
+console.log("hola")
+let audioDiv = document.getElementById("drums-sound");
+let boardGameBox = document.querySelectorAll(".box-flap");
+console.log(boardGameBox)
+const playSound = () => audioDiv.play();
+const stopSound = () => audioDiv.pause();
 
+boardGameBox.addEventListener("mouseover", playSound);
+boardGameBox.addEventListener("mouseout", stopSound);
+
+//Getting players name from Inputs
 // Adding inputs to a variable
 let player1Input = document.querySelector(".player-1-input");
 let player2Input = document.querySelector(".player-2-input");
@@ -29,7 +39,9 @@ const storePlayersNames = () => {
 }
 
 const storeTokenSelection = () => {
+
     
+    let tokenP1Div1 = localStorage.setItem("token-player1-coco", data);
 }
 
 startBtn.addEventListener("click", storePlayersNames);
