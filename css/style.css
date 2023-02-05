@@ -23,7 +23,6 @@ body {
     width: 90%;
     background-image: url(../img/board.JPG);
     background-size: contain;
-
 }
 
 .box-flap {
@@ -57,52 +56,18 @@ body {
     transform: rotateX(45deg);
     transform-origin: center top;
     transition-duration: 2s;
-    /* transform: translateY(-100px);
-    transition-duration: 1s; */
 }
 
 .box-flap-2:hover {
     transform: rotateX(45deg);
     transform-origin: center bottom;
     transition-duration: 2s;
-    /* transform: rotate(100px);
-    transition-duration: 1s; */
 }
 
 .row-1 {
     height: 100%;
-    width: 100%;
-    
+    width: 100%;   
 }
-
-/* .start-container {
-    position:absolute;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 100%;
-    z-index: 1;
-    border-radius: 50%;
-    border-style: none;
-    border: none;
-    background: none;
-}
-.go-to-player-select-btn {
-    background: none;
-    border: none;
-    background-image: url(../img/start-button.png);
-    background-size: contain;
-    background-repeat: no-repeat;
-    transition-property: transform;
-    height: 100px;
-    width: 100px;
-    cursor: pointer;
-} */
-
-/* .start-container .go-to-player-select-btn:hover {
-    transform: rotate(180deg);
-    transition-duration: 6s;
-}  */
 
 .p-1 {
     background-color: rgb(130, 127, 118, 0.5);
@@ -110,7 +75,6 @@ body {
     color: rgb(130, 127, 118, 0.5);
     text-shadow: 0px 1px 0px rgb(0, 0, 0);
 } 
-
 
 @media (min-width: 576px) {
     .main-box {
