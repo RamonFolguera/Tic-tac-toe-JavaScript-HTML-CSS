@@ -11,15 +11,21 @@
     <title>Tic Tac Toe - board</title>
 </head>
 <body>
-    <div class="container left-section mt-lg-5 ms-lg-5 me-lg-0">
-        <p>PLAYER 1:<span class="player1-name-placeholder"></span></p>
-        <div class="player-1-turn"></div>
-        <div class="left-section-text"> 
-            <p>TIC TAC TOE</p>
-            <p>A GAME FOR THOSE WHO SEEK TO FIND</p>
-            <p>A WAY TO LEAVE THEIR WORLD BEHIND</p>
-            <p>YOU PLACE YOUR PIECE WHEN IT IS YOUT TURN</p>
-            <p>WHEN YOU PLACED YOUR THREE TAKE ONE AND TRY ANOTHER TIME</p>
+    <div class="container left-section d-flex justify-content-center align-items-center mt-lg-5 ms-lg-5 me-lg-0">
+        <div class="row left-section-content p-lg-3 ">
+            <p>PLAYER 1:<span class="player1-name-placeholder"></span></p>
+            <div class="player-1-turn">
+                <p>YOUR TURN</p> 
+            </div>
+            <div class="left-section-text text-center"> 
+                <p class="p1 mb-lg-2">TIC-TAC-TOE</p>
+                <p class="p2 mb-lg-0">A GAME FOR THOSE WHO SEEK</p>
+                <p class="p3 mb-lg-0">TO FIND</p>
+                <p class="p4 mb-lg-0">A WAY TO LEAVE THEIR WORLD BEHIND</p>
+                <p class="p3 mb-lg-0">YOU PLACE YOUR PIECE WHEN IT IS YOUR TURN</p>
+                <p class="p4 mb-lg-0">WHEN YOU PLACED YOUR THREE TAKE ONE AND</p>
+                <p class="p8 mb-lg-0">TRY ANOTHER TIME</p>
+            </div>
         </div>
     </div>
     <div class="container board d-flex justify-content-center align-items-center mt-lg-5">
@@ -57,18 +63,21 @@
         </div>
       
     </div>
-    <div class="container right-section mt-lg-5 me-lg-5 ms-lg-0">
-        <p>PLAYER 2:<span class="player2-name-placeholder"></span></p>
-        <div class="player-2-turn">
-           
-        </div>
-        <div class="left-section-text"> 
-            <p>ADVENTURERS BEWARE:</p>
-            <p>DO NOT BEGIN UNLESS YOU INTEND TO FINISH</p>
-            <p>THE EXCITING CONSEQUENCES OF THE GAME</p>
-            <p>WILL APPEAR ONLY WHEN A PLAYER GETS</p>
-            <p>THREE PIECES IN ONE LINE</p>
-            <p>AND CALLED OUT ITS NAME</p>
+    <div class="container right-section d-flex justify-content-center align-items-center mt-lg-5 me-lg-5 ms-lg-0">
+        <div class="row right-section-content p-lg-3">
+            <p>PLAYER 2:<span class="player2-name-placeholder"></span></p>
+            <div class="player-2-turn d-flex justify-content-center align-items-center">
+                <p>YOUR TURN</p> 
+            </div>
+            <div class="left-section-text text-center"> 
+                <p class="p1 mb-lg-2">ADVENTURERS BEWARE:</p>
+                <p class="p2 mb-lg-0">DO NOT BEGIN UNLESS YOU INTEND</p>
+                <p class="p3 mb-lg-0"> TO FINISH</p>
+                <p class="p4 mb-lg-0">THE EXCITING CONSEQUENCES OF THE GAME</p>
+                <p class="p5 mb-lg-0">WILL APPEAR ONLY WHEN A PLAYER GETS</p>
+                <p class="p6 mb-lg-0">THREE PIECES IN ONE LINE</p>
+                <p class="p7 mb-lg-0">AND CALLED OUT ITS NAME</p>
+            </div>
         </div>
     </div>
     <script src="../js/game.js"></script>

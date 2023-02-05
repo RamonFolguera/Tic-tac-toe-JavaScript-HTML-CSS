@@ -1,3 +1,8 @@
+* {
+    box-sizing: border-box;
+}
+
+
 body {
     display: flex;
     flex-direction: column;
@@ -26,24 +31,29 @@ body {
     height: 45vh;
     width: 300px;
     box-shadow: 1px 1px 2px 2px rgb(0, 0, 0, 0.5) inset;
-    background-image: linear-gradient(rgba(255, 255, 255, 0.2),
-    rgba(255, 255, 255, 0.2)), url("../img/Wood_a001_color.jpg");
+    background-color: #5A1C00;
+    /* background-image: linear-gradient(rgba(255, 255, 255, 0.2),
+    rgba(255, 255, 255, 0.2)), url("../img/shutterstock_1492955081.jpg"); */
 }
 
-.left-section, .right-section {
-    border: 5px black solid;
+.box, .left-section-content, .right-section-content {
+  
+    background-size: contain;
+    box-shadow: inset 10px 10px 3px 2px rgba(0,0,0,0.5);
+    border: 5px;
+    border-style: solid;
+    border-color: #5A1C00;
+}
+.left-section-content, .right-section-content {
+    background-image: linear-gradient(rgba(255, 255, 255, 0.1),
+    rgba(255, 255, 255, 0.1)), url("../img/Wood_a001_color.jpg");
 }
 
 .box {
-    background-image: linear-gradient(rgba(255, 255, 255, 0.2),
-    rgba(255, 255, 255, 0.2)), url("../img/Wood_a001_color.jpg");
-    background-size: contain;
+    background-image: linear-gradient(rgba(209, 208, 208, 0.5),
+    rgba(210, 210, 210, 0.5)), url("../img/images.jpg");
     height: 32%;
     width: 32%;
-    box-shadow: inset 10px 2px 3px 2px rgba(0,0,0,0.5);
-    border: 5px;
-    border-style: solid;
-    border-color: white;
 }
 
 .box-1-1 {
@@ -71,7 +81,17 @@ body {
 /* Section to both sides of the board to show players turns and some more info */
 
 .left-section, .right-section {
+    background-image:url("../img/shutterstock_1492955081.jpg");
     height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.left-section-content, .right-section-content {
+    height: 95%;
+    width: 95%;
+    border-radius: 10px;
 }
 
 .player-1-turn, .player-2-turn {
@@ -80,36 +100,49 @@ body {
     border: 2px solid yellow;
 }
 
-@media (min-width:576px) {
+@media (min-width:992px) {
     body {
         display:flex;
         align-items: center;
         flex-direction: row;
         justify-content: space-between;
         height: 90vh;
-        
     }
+.p1, .p4, .p6,.p8 {
+    color: red;
+}
+
+.p1 {
+    font-size: 2rem;
+}
+
+.p3, .p6, .p8 {
+    font-size: 1.5rem;
+}
+
+
     .board {
         width: 600px;
     }
+
     .row-1 {
         border-radius: 5px;
         border: 1px solid black;
         height: 85vh;
         width: 600px;
         box-shadow: 1px 1px 2px 2px rgb(0, 0, 0, 0.5) inset;
-        background-image: linear-gradient(rgba(255, 255, 255, 0.2),
-        rgba(255, 255, 255, 0.2)), url("../img/Wood_a001_color.jpg");
     }
 
     .left-section, .right-section {
-        width: 335px;
         height: 85vh;
+        border-radius: 5px;
     }
 
     .left-section-text, .right-section-text {
         display:block;
     }
+
+
 
 }
 
