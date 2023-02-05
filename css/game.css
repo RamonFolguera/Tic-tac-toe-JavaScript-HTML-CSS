@@ -15,16 +15,6 @@ body {
     display:none;
 }
 
-/* .board {
-    background-image: url(../img/Wood_a001_color.jpg);
-    background-size: contain;
-    height: 90vh;
-    width: 90%;
-    margin-top: 30px;
-    border-radius: 30px;
-    box-shadow: 2px 2px 10px 1px black, 1px 1px 2px 2px rgb(0, 0, 0, 0.5) inset;
-} */
-
 .row-1 {
     border-radius: 5px;
     border: 1px solid black;
@@ -32,8 +22,6 @@ body {
     width: 300px;
     box-shadow: 1px 1px 2px 2px rgb(0, 0, 0, 0.5) inset;
     background-color: #5A1C00;
-    /* background-image: linear-gradient(rgba(255, 255, 255, 0.2),
-    rgba(255, 255, 255, 0.2)), url("../img/shutterstock_1492955081.jpg"); */
 }
 
 .box, .left-section-content, .right-section-content {
@@ -43,7 +31,6 @@ body {
     border-style: solid;
     border-color: #5A1C00;
 }
-
 
 .box {
     background-image: linear-gradient(rgba(209, 208, 208, 0.5),
@@ -67,12 +54,6 @@ body {
 .box-3-3 {
     border-bottom-right-radius: 10px;
 }
-
-/* .x-token, .o-token {
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: 90%;
-} */
 
 /* Section to both sides of the board to show players turns and some more info */
 

@@ -1,11 +1,11 @@
-.title-container, .player-1-container, .player-2-container {
-    height: 35%;
+
+.box {
+    height: 95%;
+    width: 95%;
+    font-size: 2rem;
+    color: rgb(193, 5, 5);
 }
 
-.player-1-container {
-    background-image: url(../img/winner\ frame.gif);
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-    height: 40vh;
+.player-2-turn, .player-1-turn {
+    height: 90%;
 }
