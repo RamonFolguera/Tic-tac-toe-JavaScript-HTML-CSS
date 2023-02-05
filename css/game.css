@@ -37,17 +37,13 @@ body {
 }
 
 .box, .left-section-content, .right-section-content {
-  
     background-size: contain;
     box-shadow: inset 10px 10px 3px 2px rgba(0,0,0,0.5);
     border: 5px;
     border-style: solid;
     border-color: #5A1C00;
 }
-.left-section-content, .right-section-content {
-    background-image: linear-gradient(rgba(255, 255, 255, 0.1),
-    rgba(255, 255, 255, 0.1)), url("../img/Wood_a001_color.jpg");
-}
+
 
 .box {
     background-image: linear-gradient(rgba(209, 208, 208, 0.5),
@@ -89,6 +85,8 @@ body {
 }
 
 .left-section-content, .right-section-content {
+    background-image: linear-gradient(rgba(255, 255, 255, 0.1),
+    rgba(255, 255, 255, 0.1)), url("../img/Wood_a001_color.jpg");
     height: 95%;
     width: 95%;
     border-radius: 10px;
