@@ -31,13 +31,7 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-}
-
-.main-box::after {
-    position:absolute;
-    height: 800px;
-    width: 800px;
-    box-shadow: 2px 2px 5px 5px black;
+    color:black;
 }
 
 .box-flap-1 {
@@ -76,11 +70,35 @@ body {
     text-shadow: 0px 1px 0px rgb(0, 0, 0);
 } 
 
+.music-links {
+    display:none;
+}
+
 @media (min-width: 576px) {
+
+
     .main-box {
         margin-top: 50px;
         height: 90vh;
         width: 50%;
     }
+
+    .music-links {
+        display: block;
+        position: absolute;
+        top:100px;
+        left: 50px;
+        cursor: pointer;
+    }
+
+    .with-music, .without-music {
+        color:rgb(0, 0, 0);
+        text-decoration: none;
+    }
+
+    .with-music:hover, .without-music:hover{
+        color: rgb(193, 5, 5);
+    }
+
 }
 
