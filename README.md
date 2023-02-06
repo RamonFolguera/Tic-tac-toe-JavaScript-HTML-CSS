@@ -1,4 +1,5 @@
-# Proyecto 3 - Tic Tac Toe.
+# Project 3 - Tic-Tac-Toe.
 
-Emular el juego del tres en raya con JS.
+For the fourth week at the GeeksHubs bootcamp we are asked to create a Tic-tac-toe.
+
 
