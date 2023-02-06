@@ -86,6 +86,14 @@ body {
     height:95%;
 }
 
+#monkey-token {
+    background-image: url(../img/monkey.png);
+    background-size: contain;
+    background-position: center;
+}
+
+
+
 @media (min-width:992px) {
     body {
         display:flex;
