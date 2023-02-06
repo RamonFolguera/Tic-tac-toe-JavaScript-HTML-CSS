@@ -3,7 +3,6 @@
 const audioDiv = document.getElementById("drums-sound");
 const boardGameBox = document.querySelectorAll(".box-flap");
 
-
 let withMusicAnch = document.querySelector(".with-music");
 let withoutMusicAnch = document.querySelector(".without-music");
 
@@ -19,7 +18,8 @@ const musicOn = () => {
 };
 
 const musicOff = () => {
-        return -stopSound();
+    console.log("music off");
+        // return stopSound();
 };
 
 withMusicAnch.addEventListener("click", musicOn);
