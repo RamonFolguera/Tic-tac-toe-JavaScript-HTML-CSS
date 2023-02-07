@@ -23,8 +23,8 @@ const storePlayersNames = () => {
 
     let player1Name = player1Input.value;  
     let player2Name = player2Input.value;    
-    localStorage.setItem('player1-name',player1Name);
-    localStorage.setItem('player2-name',player2Name);
+    sessionStorage.setItem('player1-name',player1Name);
+    sessionStorage.setItem('player2-name',player2Name);
 }
 
 // const storeTokenSelection = () => {

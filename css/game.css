@@ -82,16 +82,39 @@ body {
     rgba(255, 255, 255, 0.3)), url("../img/Wood_a001_color.jpg");
 }
 
-.monkey-token, .coco-token, .rino-token, .elephant-token {
-    height:95%;
-}
-
 #monkey-token {
+    height:100%;
+    width:100%;
     background-image: url(../img/monkey.png);
     background-size: contain;
     background-position: center;
+    background-repeat: no-repeat;
+}
+#cocodrile-token {
+    height:100%;
+    width:100%;
+    background-image: url(../img/cocodrile.png);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
+#monkey-token-panel {
+    height:95%;
+    width:50%;
+    background-image: url(../img/monkey.png);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+#cocodrile-token-panel {
+    height:95%;
+    width:50%;
+    background-image: url(../img/cocodrile.png);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
 
 
 @media (min-width:992px) {
