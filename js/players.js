@@ -1,3 +1,13 @@
+// let playerInputs = {
+//     player1 : '',
+//     player2 : ''
+// }
+// let inputsCapturados = Array.from(document.getElementsByTagName("input"));
+// const GuardarDatos = () => {
+//     //Ejemplo de guardado de datos en SessionStorage
+//     sessionStorage.setItem("datosUsuarios", JSON.stringify(playerInputs));
+// }
+
 //Getting players name from Inputs
 // Adding inputs to a variable
 let player1Input = document.querySelector(".player-1-input");
@@ -32,16 +42,6 @@ const storePlayersNames = () => {
 // }
 
 startBtn.addEventListener("click", storePlayersNames);
-
-// let playerInputs = {
-//     player1 : '',
-//     player2 : ''
-// }
-// let inputsCapturados = Array.from(document.getElementsByTagName("input"));
-// const GuardarDatos = () => {
-//     //Ejemplo de guardado de datos en SessionStorage
-//     sessionStorage.setItem("datosUsuarios", JSON.stringify(playerInputs));
-// }
 
 
 
