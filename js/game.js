@@ -1,21 +1,3 @@
-// const LeerDatos = () => {
-//     //Ejemplo de lectura de datos en SessionStorage
-//     let datosDeSesion = JSON.parse(sessionStorage.getItem("datosUsuarios"));
-//     console.log(datosDeSesion);
-// }
-// inputsCapturados.map(
-//     (inputCapturadoEnConcreto) => {
-//         inputCapturadoEnConcreto.addEventListener("input", ()=> {
-//             //Esta funcion se ejecuta cada vez que alguien escribe en un input.
-//             for(let elementoQueRecorro in playerInputs){
-//                 if(inputCapturadoEnConcreto.name === elementoQueRecorro){
-//                     playerInputs[elementoQueRecorro] = inputCapturadoEnConcreto.value;
-//                 }
-//             }
-//         })
-//     }
-// )
-
 // Adding span element where to show the names on the games page to a variable
 let nameP1Placeholder = document.querySelector(".player1-name-placeholder");
 let nameP2Placeholder = document.querySelector(".player2-name-placeholder");
@@ -88,7 +70,6 @@ cells.map(
 
             boardCheck[cell.id] = (turn) ? "x" : "o";
 
-            console.log(boardCheck)
             checkWinner();
 
             turn = !turn;
@@ -105,14 +86,12 @@ const checkWinner = () => {
         for(let j=0; j < boardCheck.length; j++) {
             
             if(boardCheck[winningComb[i][0]] === "x" && boardCheck[winningComb[i][1]] === "x" && boardCheck[winningComb[i][2]] === "x") {
-                console.log("monkey-wins");
-                sessionStorage.setItem("Winner1", player1)
+                sessionStorage.setItem("Winner", player1)
                 window.location.href = "../pages/winner.html";
                 return true;
             } else if(boardCheck[winningComb[i][0]] === "o" && boardCheck[winningComb[i][1]] === "o" && boardCheck[winningComb[i][2]] === "o") 
             {
-                console.log("coco wins")
-                sessionStorage.setItem("Winner2", player2)
+                sessionStorage.setItem("Winner", player2)
 
                 window.location.href = "../pages/winner.html";
                 return true;
