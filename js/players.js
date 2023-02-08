@@ -28,24 +28,21 @@ const storePlayersNames = () => {
 }
 
 // const storeTokenSelection = () => {
-
-    
 //     let tokenP1Div1 = localStorage.setItem("token-player1-coco", data);
 // }
 
 startBtn.addEventListener("click", storePlayersNames);
 
-
-
-
-
-// function that prints those values to the span element
-// const assignNamesToPlayers = (player1Name, player2Name) => {
-//     nameP1PlaceHolder.innerHTML = player1Name;
-//     nameP2PlaceHolder.innerHTML = player2Name;
-    
-    
-//     console.log(player1Name)
-//     console.log(player2Name)
+// let playerInputs = {
+//     player1 : '',
+//     player2 : ''
 // }
+// let inputsCapturados = Array.from(document.getElementsByTagName("input"));
+// const GuardarDatos = () => {
+//     //Ejemplo de guardado de datos en SessionStorage
+//     sessionStorage.setItem("datosUsuarios", JSON.stringify(playerInputs));
+// }
+
+
+
 
