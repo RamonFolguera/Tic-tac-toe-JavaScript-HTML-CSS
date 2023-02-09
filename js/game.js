@@ -50,6 +50,13 @@ let winningComb = [
     [2, 4, 6],
 ];
 
+
+window.onload = () => {
+    panelP1.appendChild(yourTurnPar);
+    panelP1.appendChild(monkeyTokenPanel);
+                
+}
+
 cells.map(
     (cell) => {
         cell.addEventListener('click', ()=>{
@@ -58,13 +65,13 @@ cells.map(
 
                 if (turn) {
                     cell.appendChild(monkeyToken.cloneNode(true));
-                    panelP1.appendChild(yourTurnPar);
-                    panelP1.appendChild(monkeyTokenPanel);
+                    panelP2.appendChild(yourTurnPar);
+                    panelP2.appendChild(cocodrileTokenPanel);
                 
                 } else {
                     cell.appendChild(cocodrileToken.cloneNode(true));
-                    panelP2.appendChild(yourTurnPar);
-                    panelP2.appendChild(cocodrileTokenPanel);
+                    panelP1.appendChild(yourTurnPar);
+                    panelP1.appendChild(monkeyTokenPanel);
                 }
             (turn) ? tokenP1-- : tokenP2--;
 
