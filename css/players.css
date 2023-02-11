@@ -10,11 +10,8 @@
     background-size: cover;
 }
 
-.player-1-container {
-    border-bottom-left-radius: 15px;
-}
-
 .player-2-container {
+    border-bottom-left-radius: 15px;
     border-bottom-right-radius: 15px;
 }
 
@@ -115,14 +112,10 @@
 }
 
 @media(min-width: 576px) {
+   
     .player-1-container, .player-2-container, .title-container {
-        height: 400px;
-        background-image:url("../img/shutterstock_1492955081.jpg");
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;
+        height: 40vh;
     }
-
     .p-red-title {
         display: block;
     }
@@ -132,5 +125,30 @@
         font-size: 1.5rem;
     }
 
+    .player-1-container {
+        border-bottom-left-radius: 15px;
+    }
+    
+    .player-2-container {
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 15px;
+    }
+}
 
+@media (min-width: 992px) {
+    .row-container {
+        width: 85vw;
+    }
+
+    .player-1-container, .player-2-container{ 
+        height: 50vh;
+    }
+
+    .title-container {
+        height: 30vh;
+    }
+
+    .p-red-title {
+        font-size: 1.5rem;
+    }
 }
