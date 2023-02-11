@@ -57,6 +57,7 @@
     background-position: center;
     height: 100%;
     width: 25%;
+    cursor: pointer;
 }
 
 .player-2-input, .player-1-input {
