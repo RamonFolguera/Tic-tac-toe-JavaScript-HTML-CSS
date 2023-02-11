@@ -115,6 +115,9 @@ body {
     background-position: center;
     background-repeat: no-repeat;
 }
+.player1-name-placeholder, .player2-name-placeholder {
+    margin-left: 20px;
+}
 
 
 @media (min-width:992px) {

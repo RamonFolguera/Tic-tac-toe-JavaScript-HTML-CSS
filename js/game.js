@@ -2,13 +2,12 @@
 let nameP1Placeholder = document.querySelector(".player1-name-placeholder");
 let nameP2Placeholder = document.querySelector(".player2-name-placeholder");
 
-// Assigning the data from input to a variable
-let player1 = sessionStorage.getItem('player1-name');
-let player2 = sessionStorage.getItem('player2-name');
+// Assigning the data from sessionStorage to a variable
+let playerNames = JSON.parse(sessionStorage.getItem('playersNames'));
 
 // Adding the text to the span element
-nameP1Placeholder.innerHTML = player1.toUpperCase();
-nameP2Placeholder.innerHTML = player2.toUpperCase();
+nameP1Placeholder.innerHTML = `${playerNames.player1.toUpperCase()}`;
+nameP2Placeholder.innerHTML = `${playerNames.player2.toUpperCase()}`;
 
 //Declaring a variable that will count how many tokens a players has left to play, and "turn" that will swap turns on every click
 let tokenP1 = 3;
@@ -104,13 +103,12 @@ const checkWinner = () => {
         for(let j=0; j < boardCheck.length; j++) {
             
             if(boardCheck[winningComb[i][0]] === "x" && boardCheck[winningComb[i][1]] === "x" && boardCheck[winningComb[i][2]] === "x") {
-                sessionStorage.setItem("Winner", player1)
+                sessionStorage.setItem("Winner", playerNames.player1)
                 window.location.href = "../pages/winner.html";
                 return true;
             } else if(boardCheck[winningComb[i][0]] === "o" && boardCheck[winningComb[i][1]] === "o" && boardCheck[winningComb[i][2]] === "o") 
             {
-                sessionStorage.setItem("Winner", player2)
-
+                sessionStorage.setItem("Winner", playerNames.player2)
                 window.location.href = "../pages/winner.html";
                 return true;
             }
