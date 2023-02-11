@@ -23,6 +23,7 @@ body {
     width: 90%;
     background-image: url(../img/board.JPG);
     background-size: contain;
+    background-repeat: no-repeat;
 }
 
 .box-flap {
@@ -35,13 +36,13 @@ body {
 }
 
 .box-flap-1 {
-    background-image: url(../img/jumanji-top-cover.png);
+    background-image: url(../img/cover-xs-top.png);
     border-bottom: 1px;
     border-bottom-style: solid;
 }
 
 .box-flap-2 {
-    background-image: url(../img/jumanji-bottom-cover2.png);
+    background-image: url(../img/cover-xs-bottom.png);
     border-top: 1px;
     border-top-style: solid;
 }
@@ -99,6 +100,19 @@ body {
     .with-music:hover, .without-music:hover{
         color: rgb(193, 5, 5);
     }
+
+    .box-flap-1 {
+        background-image: url(../img/jumanji-top-cover.png);
+        border-bottom: 1px;
+        border-bottom-style: solid;
+    }
+    
+    .box-flap-2 {
+        background-image: url(../img/jumanji-bottom-cover2.png);
+        border-top: 1px;
+        border-top-style: solid;
+    }
+
 
 }
 
