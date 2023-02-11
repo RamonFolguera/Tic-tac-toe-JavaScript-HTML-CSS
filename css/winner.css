@@ -1,11 +1,43 @@
 
 .box {
-    height: 95%;
-    width: 95%;
-    font-size: 2rem;
-    color: rgb(193, 5, 5);
+    height: 30vh;
+    width: 100vw;
+    font-size: 1.2rem;
+    color: rgb(193, 5, 5); 
+}
+
+.row-1 {
+    height: 30vh;
+}
+.row-player {
+    height: 20vh;
 }
 
 .player-2-turn, .player-1-turn {
-    height: 90%;
+    height: 50%;
 }
+
+img {
+    height:100%;
+}
+
+
+@media (min-width: 576px){
+    .box {
+        height: 95vh;
+        width: 95vw;
+        font-size: 2rem;
+    }
+
+    .row-1 {
+        height: 30vh;
+    }
+    .row-player {
+        height: 20vh;
+    }
+
+    .player-2-turn, .player-1-turn {
+        height: 90%;
+    }
+}
+

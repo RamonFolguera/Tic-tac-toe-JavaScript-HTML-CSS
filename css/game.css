@@ -119,7 +119,6 @@ body {
     margin-left: 20px;
 }
 
-
 @media (min-width:992px) {
     body {
         display:flex;
@@ -162,7 +161,17 @@ body {
         display:block;
     }
 
+    .left-section-content, .right-section-content {
+        height: 90%;
+        width: 95%;
+        border-radius: 10px;
+    }
 
-
+    .player-1-turn, .player-2-turn {
+        height: 25%;
+    }
+    .right-section-text, .left-section-text {
+        height: 75%;
+    }
 }
 
