@@ -32,25 +32,12 @@ body {
     color:black;
 }
 
-
 .box-flap-1 {
     background-image: url(../img/cover-xs-top.png);
 }
 
 .box-flap-2 {
     background-image: url(../img/cover-xs-bottom.png);
-}
-
-.box-flap-1:hover {
-    transform: rotateX(45deg);
-    transform-origin: center top;
-    transition-duration: 2s;
-}
-
-.box-flap-2:hover {
-    transform: rotateX(45deg);
-    transform-origin: center bottom;
-    transition-duration: 2s;
 }
 
 .row-1 {
@@ -65,9 +52,10 @@ body {
     text-shadow: 0px 1px 0px rgb(0, 0, 0);
 } 
 
-.with-music, .without-music, .messages {
+.with-music, .without-music{
     display:none;
 }
+
 
 @media (min-width: 576px) {
 
@@ -128,5 +116,22 @@ body {
         z-index: -1;
     }
 
+    .box-flap-1:hover {
+        transform: rotateX(45deg);
+        transform-origin: center top;
+        transition-duration: 2s;
+    }
+    
+    .box-flap-2:hover {
+        transform: rotateX(45deg);
+        transform-origin: center bottom;
+        transition-duration: 2s;
+    }
 }
 
+@media (min-width: 1200px) {
+    .box-flap-1, .box-flap-2 {
+        background-repeat: no-repeat;
+        background-size: contain;
+}
+}
