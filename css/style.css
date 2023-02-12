@@ -21,9 +21,9 @@ body {
     margin-top: 50px;
     height: 70vh;
     width: 90%;
-    background-image: url(../img/board.JPG);
+    /* background-image: url(../img/board.JPG);
     background-size: contain;
-    background-repeat: no-repeat;
+    background-repeat: no-repeat; */
 }
 
 .box-flap {
@@ -34,6 +34,7 @@ body {
     background-position: center;
     color:black;
 }
+
 
 .box-flap-1 {
     background-image: url(../img/cover-xs-top.png);
@@ -60,6 +61,7 @@ body {
 }
 
 .row-1 {
+    position:relative;
     height: 100%;
     width: 100%;   
 }
@@ -77,11 +79,10 @@ body {
 
 @media (min-width: 576px) {
 
-
     .main-box {
         margin-top: 50px;
         height: 90vh;
-        width: 50%;
+        width: 60vw;
     }
 
     .music-links {
@@ -101,18 +102,34 @@ body {
         color: rgb(193, 5, 5);
     }
 
-    .box-flap-1 {
-        background-image: url(../img/jumanji-top-cover.png);
-        border-bottom: 1px;
-        border-bottom-style: solid;
+    .box-flap-1, .box-flap-2 {
+        background-repeat: no-repeat;
+        background-size: cover;
     }
     
+    .box-flap-1 {
+        background-image: url(../img/jumanji-top-cover.png);
+        border-bottom-style: solid;
+        border-bottom: 1px;
+    }
+
     .box-flap-2 {
         background-image: url(../img/jumanji-bottom-cover2.png);
         border-top: 1px;
         border-top-style: solid;
     }
 
+    .row-1::before {
+        content: "";
+        position:absolute;
+        width: 100%;
+        height: 80%;
+        top: 20px;
+        background-image: url(../img/board.JPG);
+        background-size: cover;
+        background-repeat: no-repeat;
+        z-index: -1;
+    }
 
 }
 
