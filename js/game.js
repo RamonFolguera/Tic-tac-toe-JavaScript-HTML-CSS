@@ -2,25 +2,49 @@
 let nameP1Placeholder = document.querySelector(".player1-name-placeholder");
 let nameP2Placeholder = document.querySelector(".player2-name-placeholder");
 
-// Assigning the data from sessionStorage to a variable
+// Assigning the players name data from sessionStorage to a variable
 let playerNames = JSON.parse(sessionStorage.getItem('playersNames'));
 
 // Adding the text to the span element
 nameP1Placeholder.innerHTML = `${playerNames.player1.toUpperCase()}`;
 nameP2Placeholder.innerHTML = `${playerNames.player2.toUpperCase()}`;
 
-//Declaring a variable that will count how many tokens a players has left to play, and "turn" that will swap turns on every click
-let tokenP1 = 3;
-let tokenP2 = 3;
-let turn = true;
+//Assigning the players token choice data from sessionStorage to a variable
 
-//Creating a div and assigning it an ID to get the images for the players' tokens
-let monkeyToken = document.createElement("div");
-monkeyToken.id = "monkey-token";
-let cocodrileToken = document.createElement("div");
-cocodrileToken.id = "cocodrile-token";
+let tokensChoices = JSON.parse(sessionStorage.getItem('tokenChoices'));
+console.log(tokensChoices);
 
-let cells = Array.from(document.getElementsByClassName("box"));
+let player1Token = document.createElement("div");
+let player2Token = document.createElement("div");
+
+for (let token in tokensChoices) {
+
+    if(tokensChoices.tokenCocodrileP1 === token) {
+        player1Token.id = "tokenCocodrileP1";
+        console.log(player1Token.id)
+        } else if(tokensChoices.tokenElephantP1 === token) {
+            player1Token.id = "tokenElephantP1";
+            console.log(player1Token.id) 
+        } else if(tokensChoices.tokenMonkeyP1 === token) {
+            player1Token.id = "tokenMonkeyP1";
+            console.log(player1Token.id) 
+        } else if(tokensChoices.tokenRhinoP1 === token) {
+                player1Token.id = "tokenRhinoP1";
+                console.log(player1Token.id) 
+        }   else if(tokensChoices.tokenElephantP2 === token) {
+            player2Token.id = "tokenElephantP2";
+            console.log(player2Token.id) 
+        } else if(tokensChoices.tokenMonkeyP1 === token) {
+            player2Token.id = "tokenMonkeyP2";
+            console.log(player2Token.id) 
+        } else if(tokensChoices.tokenRhinoP2 === token) {
+                player2Token.id = "tokenRhinoP2";
+                console.log(player2Token.id) 
+        } else if(tokensChoices.tokenRhinoP2 === token) {
+            player2Token.id = "tokenRhinoP2";
+            console.log(player2Token.id) 
+    }
+}
 
 // Elements for the panel showing the players turn
 let panelP1 = document.getElementById("panel-player-1");
@@ -33,6 +57,17 @@ let monkeyTokenPanel = document.createElement("div");
 monkeyTokenPanel.id = "monkey-token-panel";
 let cocodrileTokenPanel = document.createElement("div");
 cocodrileTokenPanel.id = "cocodrile-token-panel";
+let elephantTokenPanel = document.createElement("div");
+elephantTokenPanel.id = "elephant-token-panel";
+let rhinoTokenPanel = document.createElement("div");
+rhinoTokenPanel.id = "rhino-token-panel";
+
+//Declaring a variable that will count how many tokens a players has left to play, and "turn" that will swap turns on every click
+let tokenP1 = 3;
+let tokenP2 = 3;
+let turn = true;
+
+let cells = Array.from(document.getElementsByClassName("box"));
 
 //Declaring our empty board which we will use to compare the values we obtain with the winning Combinations array
 let boardCheck = ["","","","","","","","",""];
@@ -51,7 +86,7 @@ let winningComb = [
 //Function so the game starts showing on the player1's panel that it's their turn
 window.onload = () => {
     panelP1.appendChild(yourTurnPar);
-    panelP1.appendChild(monkeyTokenPanel);           
+    panelP1.appendChild(player1Token);           
 }
 
 //Map method to acces the div array and the div corresponding to the cell we click on and pass in the necessary actions to play the game 
@@ -62,14 +97,14 @@ cells.map(
                 if((cell.innerHTML === "") && (tokenP1 > 0 || tokenP2 > 0)) {
 
                     if (turn) {
-                        cell.appendChild(monkeyToken.cloneNode(true));
+                        cell.appendChild(player1Token.cloneNode(true));
                         panelP2.appendChild(yourTurnPar);
-                        panelP2.appendChild(cocodrileTokenPanel);
+                        panelP2.appendChild(player2Token);
 
                     } else {
-                        cell.appendChild(cocodrileToken.cloneNode(true));
+                        cell.appendChild(player2Token.cloneNode(true));
                         panelP1.appendChild(yourTurnPar);
-                        panelP1.appendChild(monkeyTokenPanel);
+                        panelP1.appendChild(player1Token);
                     }
         
                     (turn) ? tokenP1-- : tokenP2--;   

@@ -82,39 +82,53 @@ body {
     rgba(255, 255, 255, 0.3)), url("../img/Wood_a001_color.jpg");
 }
 
-#monkey-token {
+#tokenMonkeyP1, #tokenCocodrileP1, #tokenElephantP1 ,#tokenRhinoP1, #tokenMonkeyP2, #tokenCocodrileP2, #tokenElephantP2 ,#tokenRhinoP2{
     height:100%;
     width:100%;
-    background-image: url(../img/monkey.png);
-    background-size: contain;
-    background-position: center;
-    background-repeat: no-repeat;
-}
-#cocodrile-token {
-    height:100%;
-    width:100%;
-    background-image: url(../img/cocodrile.png);
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
 }
 
-#monkey-token-panel {
-    height:95%;
-    width:50%;
+#tokenMonkeyP1, #tokenMonkeyP2{
     background-image: url(../img/monkey.png);
-    background-size: contain;
-    background-position: center;
-    background-repeat: no-repeat;
 }
-#cocodrile-token-panel {
+
+#tokenCocodrileP1, #tokenCocodrileP2 {
+    background-image: url(../img/cocodrile.png);
+}
+
+#tokenElephantP1, #tokenElephantP2 {
+    background-image: url(../img/elephant.png);
+}
+
+#tokenRhinoP1, #tokenRhinoP2 {
+    background-image: url(../img/rhino.png);
+}
+
+#monkey-token-panel, #cocodrile-token-panel, #elephant-token-panel, #tokenRhino-panel {
     height:95%;
     width:50%;
-    background-image: url(../img/cocodrile.png);
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
 }
+#monkey-token-panel {
+    background-image: url(../img/monkey.png);
+}
+
+#cocodrile-token-panel {
+    background-image: url(../img/cocodrile.png);
+}
+
+#elephant-token-panel {
+    background-image: url(../img/elephant.png);
+}
+
+#tokenRhino-panel {
+    background-image: url(../img/rino.png);
+}
+
 .player1-name-placeholder, .player2-name-placeholder {
     margin-left: 20px;
 }

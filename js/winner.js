@@ -20,5 +20,40 @@ const showWinner = () => {
 window.onload = () => showWinner();
 
 
+//Assigning the players token choice data from sessionStorage to a variable
 
+let tokensChoices = JSON.parse(sessionStorage.getItem('tokenChoices'));
+console.log(tokensChoices);
+
+let player1Token = document.createElement("div");
+let player2Token = document.createElement("div");
+
+for (let token in tokensChoices) {
+
+    if(tokensChoices.tokenCocodrileP1 === token) {
+        player1Token.id = "tokenCocodrileP1";
+        console.log(player1Token.id)
+        } else if(tokensChoices.tokenElephantP1 === token) {
+            player1Token.id = "tokenElephantP1";
+            console.log(player1Token.id) 
+        } else if(tokensChoices.tokenMonkeyP1 === token) {
+            player1Token.id = "tokenMonkeyP1";
+            console.log(player1Token.id) 
+        } else if(tokensChoices.tokenRhinoP1 === token) {
+                player1Token.id = "tokenRhinoP1";
+                console.log(player1Token.id) 
+        }   else if(tokensChoices.tokenElephantP2 === token) {
+            player2Token.id = "tokenElephantP2";
+            console.log(player2Token.id) 
+        } else if(tokensChoices.tokenMonkeyP1 === token) {
+            player2Token.id = "tokenMonkeyP2";
+            console.log(player2Token.id) 
+        } else if(tokensChoices.tokenRhinoP2 === token) {
+                player2Token.id = "tokenRhinoP2";
+                console.log(player2Token.id) 
+        } else if(tokensChoices.tokenRhinoP2 === token) {
+            player2Token.id = "tokenRhinoP2";
+            console.log(player2Token.id) 
+    }
+}
 

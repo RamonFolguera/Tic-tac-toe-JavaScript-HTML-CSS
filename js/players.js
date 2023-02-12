@@ -25,13 +25,12 @@ let tokens = {
     tokenCocodrileP1 : "",
     tokenElephantP1 : "",
     tokenMonkeyP1 : "",
-    tokenRinoP1 : "",
+    tokenRhinoP1 : "",
     tokenCocodrileP2 : "",
     tokenElephantP2 : "",
     tokenMonkeyP2 : "",
-    tokenRinoP2 : ""
+    tokenRhinoP2 : ""
     }
-
 let tokenDivs = Array.from(document.getElementsByClassName("token"));
 
 tokenDivs.map(
@@ -41,8 +40,7 @@ tokenDivs.map(
             for(let token in tokens){
                 if(tokenDiv.id == token){
                     tokens[token] = tokenDiv.id;
-                    console.log(tokens[token])
-                    console.log(tokens)
+                    console.log(token)
                 }
             }
         })
@@ -60,14 +58,13 @@ const storePlayersInfo = () => {
         return;
 
     }
-    sessionStorage.setItem('playersNames', JSON.stringify(playerInputs));
-    window.location.href = "../pages/game.html";
 
-    if( ((tokens.tokenCocodrileP1 === '') && (tokens.tokenElephantP1 === '') && (tokens.tokenMonkeyP1 === '') && (tokens.tokenRinoP1 === '')) || ((tokens.tokenCocodrileP2 === '') && (tokens.tokenElephantP2 === '') && (tokens.tokenMonkeyP2 === '') && (tokens.tokenRinoP2 === ''))){
+    if( ((tokens.tokenCocodrileP1 === '') && (tokens.tokenElephantP1 === '') && (tokens.tokenMonkeyP1 === '') && (tokens.tokenRhinoP1 === '')) || ((tokens.tokenCocodrileP2 === '') && (tokens.tokenElephantP2 === '') && (tokens.tokenMonkeyP2 === '') && (tokens.tokenRhinoP2 === ''))){
 
         return;
 
     }
+    sessionStorage.setItem('playersNames', JSON.stringify(playerInputs));
     sessionStorage.setItem('tokenChoices', JSON.stringify(tokens));
     window.location.href = "../pages/game.html";
 }

@@ -42,20 +42,20 @@ img {
 
 @media (min-width: 576px){
     .box {
-        height: 95vh;
-        width: 95vw;
-        font-size: 2rem;
+        height: 50%;
+        font-size: 3rem;
     }
 
     .row-1 {
-        height: 30vh;
+        height: 100%;
     }
+
     .row-player {
-        height: 20vh;
+        height: 90%;
     }
 
     .player-2-turn, .player-1-turn {
-        height: 90%;
+        height: 85%;
     }
 }
 
