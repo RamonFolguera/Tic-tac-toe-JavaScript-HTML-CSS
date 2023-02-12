@@ -133,7 +133,16 @@ body {
     margin-left: 20px;
 }
 
-@media (min-width:992px) {
+.row-1::before {
+    display: none;
+}
+
+@media (min-width: 576px) {
+
+    .left-section-text, .right-section-text {
+        font-size: 0.8rem;    
+    }
+
     body {
         display:flex;
         align-items: center;
@@ -145,13 +154,6 @@ body {
         color: rgb(193, 5, 5);
     }
     
-    .p1 {
-        font-size: 2rem;
-    }
-    
-    .p3, .p6, .p8 {
-        font-size: 1.5rem;
-    }
     .board {
         width: 600px;
     }
@@ -187,5 +189,21 @@ body {
     .right-section-text, .left-section-text {
         height: 75%;
     }
+}
+
+@media (min-width:1200px) {
+    
+    .left-section-text, .right-section-text {
+        font-size: 1rem;    
+    }
+
+    .p1 {
+        font-size: 2rem;
+    }
+    
+    .p3, .p6, .p8 {
+        font-size: 1.5rem;
+    }
+ 
 }
 

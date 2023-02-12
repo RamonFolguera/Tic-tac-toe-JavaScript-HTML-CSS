@@ -104,7 +104,7 @@ body {
 
     .box-flap-1, .box-flap-2 {
         background-repeat: no-repeat;
-        background-size: contain;
+        background-size: cover;
     }
     
     .box-flap-1 {

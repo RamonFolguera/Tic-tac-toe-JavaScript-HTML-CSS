@@ -32,18 +32,22 @@ let tokens = {
     tokenRhinoP2 : ""
     }
 let tokenDivs = Array.from(document.getElementsByClassName("token"));
+let tokenSelectionP1 = 1;
+let tokenSelectionP2 = 1;
 
 tokenDivs.map(
     tokenDiv => {
         tokenDiv.addEventListener("click", ()=>{
 
             for(let token in tokens){
-                if(tokenDiv.id == token){
-                    tokens[token] = tokenDiv.id;
-                    console.log(token)
-                }
+                        
+                        if(tokenDiv.id == token){
+                            tokens[token] = tokenDiv.id;
+                            document.getElementById(tokenDiv.id).setAttribute("style", "height:200px;width:300px;backgroundSize:200%");
+                        }
+                    }  
             }
-        })
+        )
     }
 )
 
