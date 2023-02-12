@@ -106,6 +106,7 @@
 .start-button:hover {
     background-color: rgb(176, 237, 212);
     color: rgb(13, 44, 31);
+    cursor:pointer;
 }
 
 .start-button:active {

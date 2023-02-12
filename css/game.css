@@ -137,6 +137,26 @@ body {
     display: none;
 }
 
+.go-back {
+   padding: 10px 5px;
+    background-color: rgb(13, 44, 31);
+    box-shadow: 1px 1px 1px 1px black;
+    color: white;
+    border-radius: 50%;
+    text-decoration: none;
+    font-size: 1rem;
+}
+
+.go-back:hover {
+    background-color: rgb(176, 237, 212);
+    color: rgb(13, 44, 31);
+    cursor: pointer;
+}
+
+.go-back:active {
+    box-shadow: none;
+}
+
 @media (min-width: 576px) {
 
     .left-section-text, .right-section-text {
