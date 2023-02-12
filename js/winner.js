@@ -9,21 +9,9 @@ let playerNames = JSON.parse(sessionStorage.getItem('playersNames'));
 nameP1Placeholder.innerHTML = `${playerNames.player1.toUpperCase()}`;
 nameP2Placeholder.innerHTML = `${playerNames.player2.toUpperCase()}`;
 
-const showWinner = () => {
-    let winnerPanelDiv = document.getElementById("winner-panel");
-    let winnerPar = document.createElement("p")
-    winnerPar.classList.add("text-center")
-    winnerPar.innerHTML = `CONGRATULATIONS ${sessionStorage.getItem("Winner").toUpperCase()}. YOU WIN!`;
-    winnerPanelDiv.appendChild(winnerPar)
-}
-
-window.onload = () => showWinner();
-
-
-//Assigning the players token choice data from sessionStorage to a variable
+//Assigning the winner their token choice data from sessionStorage to a variable
 
 let tokensChoices = JSON.parse(sessionStorage.getItem('tokenChoices'));
-console.log(tokensChoices);
 
 let player1Token = document.createElement("div");
 let player2Token = document.createElement("div");
@@ -32,28 +20,41 @@ for (let token in tokensChoices) {
 
     if(tokensChoices.tokenCocodrileP1 === token) {
         player1Token.id = "tokenCocodrileP1";
-        console.log(player1Token.id)
         } else if(tokensChoices.tokenElephantP1 === token) {
             player1Token.id = "tokenElephantP1";
-            console.log(player1Token.id) 
         } else if(tokensChoices.tokenMonkeyP1 === token) {
             player1Token.id = "tokenMonkeyP1";
-            console.log(player1Token.id) 
         } else if(tokensChoices.tokenRhinoP1 === token) {
                 player1Token.id = "tokenRhinoP1";
-                console.log(player1Token.id) 
         }   else if(tokensChoices.tokenElephantP2 === token) {
             player2Token.id = "tokenElephantP2";
-            console.log(player2Token.id) 
         } else if(tokensChoices.tokenMonkeyP1 === token) {
             player2Token.id = "tokenMonkeyP2";
-            console.log(player2Token.id) 
         } else if(tokensChoices.tokenRhinoP2 === token) {
                 player2Token.id = "tokenRhinoP2";
-                console.log(player2Token.id) 
         } else if(tokensChoices.tokenRhinoP2 === token) {
             player2Token.id = "tokenRhinoP2";
-            console.log(player2Token.id) 
     }
 }
 
+//Function to show winner on panel and on congratulations message when the page loads.
+const showWinner = () => {
+    let winnerPanelDiv = document.getElementById("winner-panel");
+    let winnerPar = document.createElement("p")
+    winnerPar.classList.add("text-center")
+    winnerPar.innerHTML = `CONGRATULATIONS ${sessionStorage.getItem("Winner").toUpperCase()}. YOU WIN!`;
+    winnerPanelDiv.appendChild(winnerPar)
+
+    if(sessionStorage.getItem("Winner") === playerNames.player1 ) {
+    let winnerP1TokenDiv = document.querySelector(".winner-tokenP1");
+    winnerP1TokenDiv.id = sessionStorage.getItem("tokenWinnerP1");
+
+    } else {
+
+    let winnerP2TokenDiv = document.querySelector(".winner-tokenP2");
+    winnerP2TokenDiv.id = sessionStorage.getItem("tokenWinnerP2");
+    }
+    
+}
+
+window.onload = () => showWinner();

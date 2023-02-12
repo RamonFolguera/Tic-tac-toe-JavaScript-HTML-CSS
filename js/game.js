@@ -34,7 +34,7 @@ for (let token in tokensChoices) {
         }   else if(tokensChoices.tokenElephantP2 === token) {
             player2Token.id = "tokenElephantP2";
             console.log(player2Token.id) 
-        } else if(tokensChoices.tokenMonkeyP1 === token) {
+        } else if(tokensChoices.tokenMonkeyP2 === token) {
             player2Token.id = "tokenMonkeyP2";
             console.log(player2Token.id) 
         } else if(tokensChoices.tokenRhinoP2 === token) {
@@ -139,11 +139,13 @@ const checkWinner = () => {
             
             if(boardCheck[winningComb[i][0]] === "x" && boardCheck[winningComb[i][1]] === "x" && boardCheck[winningComb[i][2]] === "x") {
                 sessionStorage.setItem("Winner", playerNames.player1)
+                sessionStorage.setItem("tokenWinnerP1", player1Token.id)
                 window.location.href = "../pages/winner.html";
                 return true;
             } else if(boardCheck[winningComb[i][0]] === "o" && boardCheck[winningComb[i][1]] === "o" && boardCheck[winningComb[i][2]] === "o") 
             {
                 sessionStorage.setItem("Winner", playerNames.player2)
+                sessionStorage.setItem("tokenWinnerP2", player2Token.id)
                 window.location.href = "../pages/winner.html";
                 return true;
             }

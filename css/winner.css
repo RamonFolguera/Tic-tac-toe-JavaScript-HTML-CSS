@@ -17,10 +17,6 @@
     height: 50%;
 }
 
-img {
-    height:100%;
-}
-
 .play-again {
     padding: 30px 15px;
     background-color: rgb(13, 44, 31);
@@ -41,21 +37,55 @@ img {
 }
 
 @media (min-width: 576px){
-    .box {
-        height: 50%;
-        font-size: 3rem;
+
+    .play-again {
+        padding: 50px 20px;
+        background-color: rgb(13, 44, 31);
+        box-shadow: 1px 1px 1px 1px black;
+        color: white;
+        border-radius: 50%;
+        text-decoration: none;
+        font-size: 1rem;
     }
 
+    .box {
+        height: 100%;
+        font-size: 3rem;
+    }
+    .board {
+        height: 95%;
+    }
     .row-1 {
         height: 100%;
     }
 
     .row-player {
+        transition-property: transform;
         height: 90%;
     }
 
     .player-2-turn, .player-1-turn {
         height: 85%;
     }
+
+    @keyframes rotating {
+        from {
+            transform: rotateY(0deg);
+        }
+        to {
+            transform: rotateY(360deg);
+        }
+    }
+
+    #tokenMonkeyP1, #tokenCocodrileP1, #tokenElephantP1 ,#tokenRhinoP1, #tokenMonkeyP2, #tokenCocodrileP2, #tokenElephantP2 ,#tokenRhinoP2 {
+        height: 90%;
+        animation: rotating 3s linear infinite;
+    }
+
+    .winner-tokenP1, .winner-tokenP2 {
+        height: 100%;
+        width: 100%;
+    }
+
 }
 
