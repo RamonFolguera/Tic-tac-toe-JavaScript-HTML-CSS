@@ -159,10 +159,6 @@ body {
 
 @media (min-width: 576px) {
 
-    .left-section-text, .right-section-text {
-        font-size: 0.8rem;    
-    }
-
     body {
         display:flex;
         align-items: center;
@@ -193,10 +189,6 @@ body {
         border-radius: 5px;
     }
 
-    .left-section-text, .right-section-text {
-        display:block;
-    }
-
     .left-section-content, .right-section-content {
         height: 90%;
         width: 95%;
@@ -211,10 +203,11 @@ body {
     }
 }
 
-@media (min-width:1200px) {
-    
+@media (min-width:1140px) {
+   
     .left-section-text, .right-section-text {
-        font-size: 1rem;    
+        display:block;
+        font-size: 1rem;   
     }
 
     .p1 {

@@ -80,11 +80,6 @@
     background-image: url(../img/rhino.png);
 }
 
-.player-token-1:hover, .player-token-2:hover, .player-token-3:hover, .player-token-4:hover  {
-    transform: scale(200%);
-    transition: 2s;
-}
-
 .p-red, .p-red-title {
     color: rgb(193, 5, 5);
 }
@@ -138,6 +133,12 @@
 }
 
 @media (min-width: 992px) {
+   
+    .player-token-1:hover, .player-token-2:hover, .player-token-3:hover, .player-token-4:hover  {
+        transform: scale(200%);
+        transition: 2s;
+    }
+    
     .row-container {
         width: 85vw;
     }
