@@ -70,10 +70,6 @@ body {
         width: 60vw;
     }
 
-    .with-music, .without-music {
-        display:block;
-    }
-
     .music-links {
         position: absolute;
         top:100px;
@@ -95,6 +91,11 @@ body {
         background-size: cover;
     }
     
+
+}
+
+@media (min-width: 1200px) {
+
     .box-flap-1 {
         background-image: url(../img/jumanji-top-cover.png);
     }
@@ -127,11 +128,14 @@ body {
         transform-origin: center bottom;
         transition-duration: 2s;
     }
-}
 
-@media (min-width: 1200px) {
     .box-flap-1, .box-flap-2 {
         background-repeat: no-repeat;
-        background-size: contain;
+        background-size: cover;
+}
+
+.with-music, .without-music {
+    display: block;
+    width: 100%;
 }
 }
