@@ -11,19 +11,29 @@
     <title>Tic Tac Toe - board</title>
 </head>
 <body>
+    <div class="container buttons-section">
+        <div class="row">
+            <a href="./game.html">START AGAIN</a>
+        </div>
+    </div>
     <div class="container left-section d-flex justify-content-center align-items-center mt-0 mt-lg-5 ms-lg-5 me-lg-0">
-        <div class="row left-section-content pb-5 p-lg-3 text-start  d-flex justify-content-center">
-            <p class="mb-lg-0 fs-5 ps-5">PLAYER 1:<span class="player1-name-placeholder ps-2"></span></p>
+        <div class="row left-section-content p-lg-3 text-start">
+            <div class="mb-lg-0 w-50 fs-5 ps-4">
+                <p>PLAYER 1:</p>  
+                <p class="player1-name-placeholder ms-2"></p>
+            </div>
             <div id="panel-player-1" class="player-1-turn d-flex justify-content-center align-items-center"></div>
-            <div class="left-section-text text-center"> 
-                <p class="p1 mb-lg-2">TIC-TAC-TOE</p>
-                <p class="p2 mb-lg-0">A GAME FOR THOSE WHO SEEK</p>
-                <p class="p3 mb-lg-0">TO FIND</p>
-                <p class="p4 mb-lg-0">A WAY TO LEAVE THEIR WORLD BEHIND</p>
-                <p class="p3 mb-lg-0">YOU PLACE YOUR PIECE WHEN IT IS YOUR TURN</p>
-                <p class="p4 mb-lg-0">WHEN YOU PLACED YOUR THREE TAKE ONE AND</p>
-                <p class="p8 mb-lg-2">TRY ANOTHER TIME</p>
-                <a class="go-back" href="../pages/players.html">GO BACK TO PLAYERS PAGE</a>
+            <div class="d-flex flex-column justify-content-between left-section-text"> 
+                <div class="text-center h-75 d-flex flex-column justify-content-between">
+                    <p class="p1 mb-lg-2">TIC-TAC-TOE</p>
+                    <p class="p2 mb-lg-0">A GAME FOR THOSE WHO SEEK</p>
+                    <p class="p3 mb-lg-0">TO FIND</p>
+                    <p class="p4 mb-lg-0">A WAY TO LEAVE THEIR WORLD BEHIND</p>
+                    <p class="p3 mb-lg-0">YOU PLACE YOUR PIECE WHEN IT IS YOUR TURN</p>
+                    <p class="p4 mb-lg-0">WHEN YOU PLACED YOUR THREE TAKE ONE AND</p>
+                    <p class="p8 mb-lg-2">TRY ANOTHER TIME</p>
+                </div>
+                <a class="go-back" href="../pages/players.html">GO BACK</a>
             </div>
             
         </div>
@@ -42,18 +52,29 @@
         </div>
     </div>
     <div class="container right-section d-flex justify-content-center align-items-center mt-lg-5 me-lg-5 ms-lg-0">
-        <div class="row right-section-content p-lg-3 text-start  d-flex justify-content-center pb-5 pt-2">
-            <p class="mb-lg-0 fs-5 ps-5">PLAYER 2:<span class="player2-name-placeholder ps-2"></span></p>
-            <div id="panel-player-2" class="player-2-turn d-flex justify-content-center align-items-center"></div>
-            <div class="right-section-text text-center"> 
-                <p class="p1 mb-lg-2">ADVENTURERS BEWARE:</p>
-                <p class="p2 mb-lg-0">DO NOT BEGIN UNLESS YOU INTEND</p>
-                <p class="p3 mb-lg-0"> TO FINISH</p>
-                <p class="p4 mb-lg-0">THE EXCITING CONSEQUENCES OF THE GAME</p>
-                <p class="p5 mb-lg-0">WILL APPEAR ONLY WHEN A PLAYER GETS</p>
-                <p class="p6 mb-lg-0">THREE PIECES IN ONE LINE</p>
-                <p class="p7 mb-lg-0">AND CALLED OUT ITS NAME</p>
+        <div class="row right-section-content p-lg-3 text-start pt-2">
+            <div class="mb-lg-0 w-50 fs-5 ps-4">
+                <p>PLAYER 2:</p>  
+                <p class="player2-name-placeholder ms-2"></p>
             </div>
+            <div id="panel-player-2" class="player-2-turn d-flex justify-content-center align-items-center"></div>
+            <div class="d-flex flex-column justify-content-between right-section-text text-center"> 
+                <div class="h-75 d-flex flex-column justify-content-between">
+                    <p class="p1 mb-lg-2">ADVENTURERS BEWARE:</p>
+                    <p class="p2 mb-lg-0">DO NOT BEGIN UNLESS YOU INTEND</p>
+                    <p class="p3 mb-lg-0"> TO FINISH</p>
+                    <p class="p4 mb-lg-0">THE EXCITING CONSEQUENCES OF THE GAME</p>
+                    <p class="p5 mb-lg-0">WILL APPEAR ONLY WHEN A PLAYER GETS</p>
+                    <p class="p6 mb-lg-0">THREE PIECES IN ONE LINE</p>
+                    <p class="p7 mb-lg-0">AND CALLED OUT ITS NAME</p>
+                    <a class="start-again" href="../pages/game.html">START AGAIN</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container buttons-section">
+        <div class="row">
+            <a href="./players.html">GO BACK</a>
         </div>
     </div>
     <script src="../js/game.js"></script>

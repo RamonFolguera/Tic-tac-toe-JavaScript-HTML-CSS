@@ -52,6 +52,7 @@ let panelP2 = document.getElementById("panel-player-2");
 
 let yourTurnPar = document.createElement("p");
 yourTurnPar.innerHTML = "YOUR TURN";
+yourTurnPar.classList.add("your-turn");
 
 let monkeyTokenPanel = document.createElement("div");
 monkeyTokenPanel.id = "monkey-token-panel";

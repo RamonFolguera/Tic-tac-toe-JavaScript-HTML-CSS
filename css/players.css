@@ -12,6 +12,7 @@
     width: 100vw;
 }
 
+
 .player-1-container, .player-2-container, .title-container {
     height: 30vh;
     background-image:url("../img/shutterstock_1492955081.jpg");
@@ -122,6 +123,11 @@
     transform: scale(150%);
     transition: 2s;
 }
+
+.disabled-token {
+    pointer-events:none;
+}
+
 
 .names-missing-container, .token-missing-container {
     position: absolute;
