@@ -19,19 +19,6 @@ inputElements.map(
     }
 )
 
-// Getting token choice
-
-// let tokens = {
-//     tokenCocodrileP1 : "tokenCocodrileP1",
-//     tokenElephantP1 : "tokenElephantP1",
-//     tokenMonkeyP1 : "tokenMonkeyP1",
-//     tokenRhinoP1 : "tokenRhinoP1",
-//     tokenCocodrileP2 : "tokenCocodrileP2",
-//     tokenElephantP2 : "tokenElephantP2",
-//     tokenMonkeyP2 : "tokenMonkeyP2",
-//     tokenRhinoP2 : "tokenRhinoP2"
-// }   
-
 let tokensP1 = {
     tokenCocodrileP1 : "",
     tokenElephantP1 : "",
@@ -120,31 +107,6 @@ const chooseToken = (chosenToken) => {
     }
 
 }
-
-// tokenDivs.map(
-//     tokenDiv => {
-//         tokenDiv.addEventListener("click", ()=>{
-            
-//             for(let token in tokens){
-//                 console.log(tokens[token])
-//                 if(tokenDiv.id == token && tokens[token] === ""){
-//                     tokens[token] = tokenDiv.id;
-//                     let selectedToken = document.getElementById(tokenDiv.id);
-//                     selectedToken.classList.add("player-token-selected");
-//                     selectedToken.classList.add("disabled-token");
-
-//                     } else if (tokenDiv.id == token && tokens[token] !== "") {
-//                         let selectedToken = document.getElementById(tokenDiv.id);
-//                         selectedToken.classList.remove("player-token-selected");
-//                         selectedToken.classList.remove("disabled-token");
-//                         console.log("holi");
-
-//                     }
-//                 }  
-//             }
-//         )
-//     }
-// )
 
 // Adding start button to a variable
 let startBtn = document.getElementById("start-game-btn");

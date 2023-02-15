@@ -1,3 +1,7 @@
+:root {
+    --red: rgb(193, 5, 5);
+}
+
 * {
     box-sizing: border-box;
 }
@@ -70,13 +74,17 @@ body {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    height: 100%;
+    height: 22vh;
+}
+
+.player1, .player2 {
+    width: 8em;
 }
 
 .left-section-content, .right-section-content {
     background-image: linear-gradient(rgba(255, 255, 255, 0.1),
     rgba(255, 255, 255, 0.1)), url("../img/Wood_a001_color.jpg");
-    height: 75%;
+    height: 85%;
     width: 95%;
     border-radius: 10px;
     display:flex;
@@ -86,12 +94,16 @@ body {
 }
 
 .player-1-turn, .player-2-turn {
-    width: 40%;
-    height: 70%;
+    width: 45%;
+    height: 85%;
     box-shadow: inset 5px 5px 3px 2px rgba(0,0,0,0.5);
     border-radius: 5px;
     background-image: linear-gradient(rgba(255, 255, 255, 0.3),
     rgba(255, 255, 255, 0.3)), url("../img/Wood_a001_color.jpg");
+}
+
+.player1-name-placeholder, .player2-name-placeholder {
+    color: var(--red);
 }
 
 #tokenMonkeyP1, #tokenCocodrileP1, #tokenElephantP1 ,#tokenRhinoP1, #tokenMonkeyP2, #tokenCocodrileP2, #tokenElephantP2 ,#tokenRhinoP2{
@@ -153,7 +165,8 @@ body {
 
 .your-turn {
     margin: 0;
-    color: rgb(193, 5, 5);
+    color: var(--red);
+    
 }
 
 .go-back:hover, .start-again:hover {
@@ -176,7 +189,9 @@ body {
     display:none !important;
 }
 
-
+.games {
+    display:none;
+}
 @media (min-width: 576px) {
 
     body {
@@ -192,7 +207,7 @@ body {
     }
 
     .p1, .p4, .p6,.p8 {
-        color: rgb(193, 5, 5);
+        color: var(--red);
     }
 
     .row-1 {
@@ -238,7 +253,6 @@ body {
         font-size: 1rem;
     }
 
-
     .left-section-content, .right-section-content {
         height: 95%;
         width: 95%;
@@ -249,10 +263,6 @@ body {
         align-items: center;
     }
         
-    .left-section-text, .right-section-text {
-        display: block !important;
-    }
-
     .left-section, .right-section {
         height: 85vh;
         width: 100%;
@@ -265,13 +275,12 @@ body {
     }
     
     .player1-name-placeholder, .player2-name-placeholder {
-        color:rgb(193, 5, 5);
         font-size: 1.5rem;
     }
 
     .row-1 {
         height: 85vh;
-        width: 50em;
+        width: 650px;
     }
 
     .your-turn {
@@ -281,17 +290,22 @@ body {
 
     }
     .left-section-text, .right-section-text {
-        height: 65%;
-        display:block;
+        height: 60%;
+        display:block !important;
         font-size: 1rem;   
     }
 
     .p1 {
-        font-size: 2rem;
+        font-size: 1.6rem;
     }
     
     .p3, .p6, .p8 {
-        font-size: 1.5rem;
+        font-size: 1.3rem;
     }
+
+    .games {
+        display:block;
+    }
+
 }
 
