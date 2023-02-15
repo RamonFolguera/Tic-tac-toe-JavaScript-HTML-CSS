@@ -60,26 +60,21 @@ let tokenDivsP2 = Array.from(document.getElementsByClassName("tokenP2"));
 const chooseToken = (chosenToken) => {
     
     for(let tokenP1 in tokensP1){
-        console.log(tokensP1[tokenP1])
         if(chosenToken == tokenP1 && tokensP1[tokenP1] === ""){
             tokensP1[tokenP1] = chosenToken;
-            console.log(tokensP1);
             } 
         }
 
-        for(let tokenP2 in tokensP2){
-            console.log(tokensP2[tokenP2])
-            if(chosenToken == tokenP2 && tokensP2[tokenP2] === ""){
-                tokensP2[tokenP2] = chosenToken;
-                console.log(tokensP2);
-                } 
-            }   
+    for(let tokenP2 in tokensP2){
+        if(chosenToken == tokenP2 && tokensP2[tokenP2] === ""){
+            tokensP2[tokenP2] = chosenToken;
+            } 
+        }   
 
     if(!player1 && ((tokensP1[chosenToken] === "tokenCocodrileP1") || (tokensP1[chosenToken] === "tokenElephantP1") || (tokensP1[chosenToken] === "tokenMonkeyP1") || (tokensP1[chosenToken] === "tokenRhinoP1"))){
      
         player1 = tokensP1[chosenToken];
         document.getElementById(chosenToken).onclick = null;
-        console.log(player1);
         document.getElementById(chosenToken).classList.add("player-token-selected");
 
         tokenDivsP1.map(
@@ -102,9 +97,7 @@ const chooseToken = (chosenToken) => {
 
     } else if (!player2 && ((tokensP2[chosenToken] === "tokenCocodrileP2") || (tokensP2[chosenToken] === "tokenElephantP2") || (tokensP2[chosenToken] === "tokenMonkeyP2") || (tokensP2[chosenToken] === "tokenRhinoP2"))) {
 
-        
         player2 = tokensP2[chosenToken];
-        console.log(player2);
         document.getElementById(chosenToken).onclick = null;
         document.getElementById(chosenToken).classList.add("player-token-selected");
 
@@ -125,6 +118,7 @@ const chooseToken = (chosenToken) => {
             document.getElementById("tokenRhinoP1").onclick = null;
         }
     }
+
 }
 
 // tokenDivs.map(
@@ -201,7 +195,7 @@ const createMissingTokenMessage = () => {
     pTokenMissing.innerHTML="SOMETHING IS MISISNG! WE CAN'T START UNTIL YOU SELECT A TOKEN TO PLAY WITH! GO BACK AND TRY AGAIN!"
     bodyElement.appendChild(pTokenMissingContainer);
 }
-
+console.log(JSON.stringify(tokensP2));
 //Function to close the missing tokens pop up
 const closeMissingTokenMessage = () => {
     pTokenMissingContainer.remove();
@@ -218,17 +212,21 @@ const storePlayersInfo = () => {
         return;
     }
 
-    if( ((tokens.tokenCocodrileP1 === '') && (tokens.tokenElephantP1 === '') && (tokens.tokenMonkeyP1 === '') && (tokens.tokenRhinoP1 === '')) || ((tokens.tokenCocodrileP2 === '') && (tokens.tokenElephantP2 === '') && (tokens.tokenMonkeyP2 === '') && (tokens.tokenRhinoP2 === ''))){
+    if( ((tokensP1.tokenCocodrileP1 === '') && (tokensP1.tokenElephantP1 === '') && (tokensP1.tokenMonkeyP1 === '') && (tokensP1.tokenRhinoP1 === '')) || ((tokensP2.tokenCocodrileP2 === '') && (tokensP2.tokenElephantP2 === '') && (tokensP2.tokenMonkeyP2 === '') && (tokensP2.tokenRhinoP2 === ''))){
 
         createMissingTokenMessage()
 
         return;
 
     }
+    console.log("hola");
     sessionStorage.setItem('playersNames', JSON.stringify(playerInputs));
-    sessionStorage.setItem('tokenChoices', JSON.stringify(tokens));
+    sessionStorage.setItem('tokenP1Choice', JSON.stringify(tokensP1));
+    sessionStorage.setItem('tokenP2Choice', JSON.stringify(tokensP2));
+    console.log(JSON.stringify(tokensP2));
+    console.log(JSON.stringify(tokensP1));
+    console.log(JSON.stringify(playerInputs));
     window.location.href = "../pages/game.html";
 }
-
 
 startBtn.addEventListener("click", storePlayersInfo);

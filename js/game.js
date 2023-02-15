@@ -11,36 +11,43 @@ nameP2Placeholder.innerHTML = `${playerNames.player2.toUpperCase()}`;
 
 //Assigning the players token choice data from sessionStorage to a variable
 
-let tokensChoices = JSON.parse(sessionStorage.getItem('tokenChoices'));
-console.log(tokensChoices);
+let tokenP1Choice = JSON.parse(sessionStorage.getItem('tokenP1Choice'));
+let tokenP2Choice = JSON.parse(sessionStorage.getItem('tokenP2Choice'));
+console.log(tokenP1Choice);
+console.log(tokenP2Choice);
 
 let player1Token = document.createElement("div");
 let player2Token = document.createElement("div");
 
-for (let token in tokensChoices) {
+for (let tokenP1 in tokenP1Choice) {
 
-    if(tokensChoices.tokenCocodrileP1 === token) {
+    if(tokenP1Choice.tokenCocodrileP1 === tokenP1) {
         player1Token.id = "tokenCocodrileP1";
         console.log(player1Token.id)
-        } else if(tokensChoices.tokenElephantP1 === token) {
+        } else if(tokenP1Choice.tokenElephantP1 === tokenP1) {
             player1Token.id = "tokenElephantP1";
             console.log(player1Token.id) 
-        } else if(tokensChoices.tokenMonkeyP1 === token) {
+        } else if(tokenP1Choice.tokenMonkeyP1 === tokenP1) {
             player1Token.id = "tokenMonkeyP1";
             console.log(player1Token.id) 
-        } else if(tokensChoices.tokenRhinoP1 === token) {
+        } else if(tokenP1Choice.tokenRhinoP1 === tokenP1) {
                 player1Token.id = "tokenRhinoP1";
                 console.log(player1Token.id) 
-        }   else if(tokensChoices.tokenElephantP2 === token) {
+        }   
+}       
+        
+for (let tokenP2 in tokenP2Choice) {
+        
+        if(tokenP2Choice.tokenElephantP2 === tokenP2) {
             player2Token.id = "tokenElephantP2";
             console.log(player2Token.id) 
-        } else if(tokensChoices.tokenMonkeyP2 === token) {
+        } else if(tokenP2Choice.tokenMonkeyP2 === tokenP2) {
             player2Token.id = "tokenMonkeyP2";
             console.log(player2Token.id) 
-        } else if(tokensChoices.tokenRhinoP2 === token) {
+        } else if(tokenP2Choice.tokenRhinoP2 === tokenP2) {
                 player2Token.id = "tokenRhinoP2";
                 console.log(player2Token.id) 
-        } else if(tokensChoices.tokenRhinoP2 === token) {
+        } else if(tokenP2Choice.tokenRhinoP2 === tokenP2) {
             player2Token.id = "tokenRhinoP2";
             console.log(player2Token.id) 
     }
