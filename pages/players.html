@@ -11,8 +11,8 @@
     <title>Players</title>
 </head>
 <body>
-    <div class="container-fluid main-box mt-lg-5 d-flex flex-column align-items-center">
-        <div class="row row-container ">
+    <div class="container-fluid main-box m-0 w-100 mt-lg-5 d-flex flex-column align-items-center">
+        <div class="row row-container1 ">
             <div class="col-12 col-md-12 col-lg-12 title-container d-flex justify-content-center pt-3 pb-3">
                 <div class="text-center title-content d-flex justify-content-center align-items-center pt-lg-3 pt-3 pb-0 ps-2">
                     <div>
@@ -25,19 +25,27 @@
                 </div>
             </div>
         </div>
-        <div class="row row-container ms-lg-5 me-lg-5">    
+        <div class="row row-container2 ms-lg-5 me-lg-5">    
             <div class="col-12 col-md-6 col-lg-6 player-1-container pt-3 d-flex justify-content-center">
                 <div class="player-content d-flex flex-column align-items-center pt-lg-4">
-                    <div class="pb-lg-3">
-                        <p class="m-0 p-red">PLAYER 1, WHAT'S YOUR NAME?</p>
+                    <div class="d-flex flex-column align-items-center">
+                        <div class="pb-lg-3">
+                            <p class="m-0 p-red">PLAYER 1, WHAT'S YOUR NAME?</p>
+                        </div>
+                        <div class="pe-md-5 ps-md-5 w-75">
+                            <input name="player1" class="form-control player-1-input" type="text" placeholder="INTRODUCE PLAYER 1 NAME" maxlength="10">
+                        </div>
+                        <div class="w-75 d-flex justify-content-between">
+                            <p>OR BATTLE AGAINST THE </p>
+                            <button class="cpu" onclick="chooseCpuP1()" id="cpuP1">
+                                CPU
+                            </button>
+                        </div>
+                        <div class="pt-lg-4">
+                            <p>NOW CHOOSE YOUR TOKEN</p>
+                        </div>
+                       
                     </div>
-                    <div class="pe-md-5 ps-md-5 w-75">
-                        <input name="player1" class="form-control player-1-input" type="text" placeholder="INTRODUCE PLAYER 1 NAME" maxlength="10">
-                    </div>
-                    <div class="pt-lg-4">
-                        <p>NOW CHOOSE YOUR TOKEN</p>
-                    </div>
-
                     <div class="tokens-container d-flex justify-content-between">
                         <div class="tokenP1 player-token-1" onclick="chooseToken('tokenCocodrileP1')"  id="tokenCocodrileP1"></div>
                         <div class="tokenP1 player-token-2" onclick="chooseToken('tokenElephantP1')" id="tokenElephantP1"></div>
@@ -53,6 +61,12 @@
                     </div>
                     <div class="pe-md-5 ps-md-5 w-75">
                         <input name="player2" class="form-control player-2-input" type="text" placeholder="INTRODUCE PLAYER 2 NAME" maxlength="10">
+                    </div>
+                    <div class="w-75 d-flex justify-content-between">
+                        <p>OR BATTLE AGAINST THE </p>
+                        <button class="cpu" id="cpuP2">
+                            CPU
+                        </button>
                     </div>
                     <div class="pt-lg-4">
                         <p>NOW CHOOSE YOUR TOKEN</p>

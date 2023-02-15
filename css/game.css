@@ -1,5 +1,6 @@
 :root {
     --red: rgb(193, 5, 5);
+    --green: rgb(13, 44, 31);
 }
 
 * {
@@ -19,7 +20,7 @@ body {
     text-align: center;
     width: 100vw;
     padding: 10px 5px;
-    background-color: rgb(13, 44, 31);
+    background-color: var(--green);
     box-shadow: inset 0 0 1px 1px black;
     color: white;
     border-radius:5px;

@@ -1,20 +1,31 @@
+:root {
+    --red: rgb(193, 5, 5);
+    --green: rgb(13, 44, 31);
+}
+
 * {
     margin: 0;
     padding: 0;
 }
 
+/* This is to position absolute centered the pop up messages when names or tokens are missing */
 .main-box {
     position: relative;
-
+    height: 100vh;
 }
 
-.row-container {
+.row-container1 {
     width: 100vw;
+    height: 20%;
 }
 
+.row-container2 {
+    width: 100vw;
+    height: 40%;
+}
 
 .player-1-container, .player-2-container, .title-container {
-    height: 30vh;
+    height: 100%;
     background-image:url("../img/shutterstock_1492955081.jpg");
     background-position: center;
     background-repeat: no-repeat;
@@ -27,7 +38,6 @@
 }
 
 .title-container {
-    height:22vh;
     border-top-left-radius: 15px;
     border-top-right-radius: 15px;
 }
@@ -92,7 +102,7 @@
 }
 
 .p-red, .p-red-title {
-    color: rgb(193, 5, 5);
+    color: var(--red);
 }
 
 .p-red-title {
@@ -128,7 +138,6 @@
     pointer-events:none;
 }
 
-
 .names-missing-container, .token-missing-container {
     position: absolute;
     display: flex;
@@ -157,7 +166,7 @@
 }
 
 .message-btn-container:hover {
-    box-shadow: 1px 1px 20px 5px rgb(13, 44, 31);;
+    box-shadow: 1px 1px 20px 5px var(--green);
 }
 
 .btn-names-missing, .btn-token-missing {
@@ -165,15 +174,40 @@
     width: 25%;
     z-index: 2;
     color: white;
-    background-color:rgb(13, 44, 31); ;
+    background-color:var(--green); 
     border-radius: 15px;
 }
 
 .btn-names-missing:hover, .btn-token-missing:hover {
     cursor:pointer;
-    color:rgb(13, 44, 31);
+    color: var(--green);
     background-color:rgb(176, 237, 212);
-    box-shadow: 1px 1px 5px 5px rgb(13, 44, 31);
+    box-shadow: 1px 1px 5px 5px var(--green);
+}
+
+.human, .cpu {
+    padding: 5px 5px;
+    background-color: var(--green);
+    box-shadow: 1px 1px 1px 1px black;
+    color: white;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 1rem;
+    border: none;
+}
+
+.human:hover, .cpu:hover {
+    background-color: rgb(176, 237, 212);
+    color: var(--green);
+    cursor: pointer;
+}
+
+.human:active, .cpu:active{
+    box-shadow: none;
+}
+
+.cpu {
+
 }
 
 @media(min-width: 576px) {

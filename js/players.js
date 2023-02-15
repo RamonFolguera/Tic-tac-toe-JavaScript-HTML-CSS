@@ -4,6 +4,7 @@ let playerInputs = {
     player1 : '',
     player2 : ''
 }
+
 let inputElements = Array.from(document.getElementsByTagName("input"));
 
 inputElements.map(
@@ -19,6 +20,27 @@ inputElements.map(
     }
 )
 
+let cpuBtnP1 = document.getElementById("cpuP1");
+let cpuBtnP2 = document.getElementById("cpuP2");
+
+let player1;
+let player2;
+let cpu1;
+let cpu2;
+
+const chooseCpuP1 = () => {
+    if(!player1) {
+        cpuBtnP1 
+        player1 = tokensP1[chosenToken];
+        cpuBtnP1.onclick = null;
+        cpuBtnP2.onclick = null;
+        document.getElementById(chosenToken).classList.add("player-token-selected");
+    }
+}
+sessionStorage.setItem('playersNames', JSON.stringify(playerInputs));
+cpuBtnP1.addEventListener("click", chooseCpuP1);
+cpuBtnP2.addEventListener("click", chooseCpuP2);
+
 let tokensP1 = {
     tokenCocodrileP1 : "",
     tokenElephantP1 : "",
@@ -31,14 +53,6 @@ let tokensP2 = {
     tokenMonkeyP2 : "",
     tokenRhinoP2 : ""
 }   
-
-// let tokenDivs = Array.from(document.getElementsByClassName("token"));
-let tokenSelectionP1 = 1;
-let tokenSelectionP2 = 1;
-
-let player1;
-let player2;
-
 
 let tokenDivsP1 = Array.from(document.getElementsByClassName("tokenP1"));
 let tokenDivsP2 = Array.from(document.getElementsByClassName("tokenP2"));
