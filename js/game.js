@@ -100,6 +100,7 @@ window.onload = () => {
     panelP1.appendChild(player1Token);           
 }
 let cpuCellChoice;
+let randomCell = 0;
 
 //Map method to acces the div array and the div corresponding to the cell we click on and pass in the necessary actions to play the game 
 
@@ -128,21 +129,22 @@ let cpuCellChoice;
                         while ( i === 0 ) {
 
                             
-                            cell.id = Math.floor((Math.random() * 9));
-                            console.log(cell.id)
-                            console.log(boardCheck[cell.id]);
+                            randomCell = Math.floor((Math.random() * 9));
+                            console.log(randomCell)
+                            console.log(boardCheck[randomCell]);
                             
-                            if (boardCheck[cell.id] === "") {
+                            if (boardCheck[randomCell] === "") {
                                 
-                                cpuCellChoice = document.getElementById(cell.id);
+                                cpuCellChoice = document.getElementById(randomCell);
                                 console.log("entro while")
-                                console.log(cell.id);
+                                console.log(randomCell);
                                 console.log(cpuCellChoice)
-                                cpuCellChoice.innerHTML= "o";
+                                cpuCellChoice.appendChild(player2Token.cloneNode(true));
                                 panelP1.appendChild(yourTurnPar);
                                 panelP1.appendChild(player1Token);
-                                boardCheck[cell.id] = (turn) ? "x" : "o";
+                                boardCheck[randomCell] = (turn) ? "x" : "o";
                                 console.log(boardCheck);
+                                checkWinner();
                                 i = 1;
                                 console.log(i);
                                 } else {
