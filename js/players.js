@@ -5,6 +5,11 @@ let playerInputs = {
     player2 : ''
 }
 
+let cpuChoice = {
+    cpu1 : '',
+    cpu2 : ''
+}
+
 let inputElements = Array.from(document.getElementsByTagName("input"));
 
 inputElements.map(
@@ -27,19 +32,37 @@ let player1;
 let player2;
 let cpu1;
 let cpu2;
+let cpuPlaying = "";
+const inputP1 = document.querySelector(".player-1-input");
+const inputP2 = document.querySelector(".player-2-input");
+
 
 const chooseCpuP1 = () => {
-    if(!player1) {
-        cpuBtnP1 
-        player1 = tokensP1[chosenToken];
+    if(!cpu1) {
+        
+        cpuPlaying = "cpu-player-1";
         cpuBtnP1.onclick = null;
         cpuBtnP2.onclick = null;
-        document.getElementById(chosenToken).classList.add("player-token-selected");
+        inputP1.remove();
+        playerInputs.player1 = null;
+
+
+    } 
+}
+const chooseCpuP2 = () => {
+
+    if(!cpu2) {
+            
+        cpuPlaying = "cpu-player-2";
+        cpuBtnP1.onclick = null;
+        cpuBtnP2.onclick = null;
+        inputP2.remove();
+        playerInputs.player2 = null;
     }
 }
-sessionStorage.setItem('playersNames', JSON.stringify(playerInputs));
-cpuBtnP1.addEventListener("click", chooseCpuP1);
-cpuBtnP2.addEventListener("click", chooseCpuP2);
+
+console.log(cpu1)
+
 
 let tokensP1 = {
     tokenCocodrileP1 : "",
@@ -73,7 +96,7 @@ const chooseToken = (chosenToken) => {
         }   
 
     if(!player1 && ((tokensP1[chosenToken] === "tokenCocodrileP1") || (tokensP1[chosenToken] === "tokenElephantP1") || (tokensP1[chosenToken] === "tokenMonkeyP1") || (tokensP1[chosenToken] === "tokenRhinoP1"))){
-     
+    
         player1 = tokensP1[chosenToken];
         document.getElementById(chosenToken).onclick = null;
         document.getElementById(chosenToken).classList.add("player-token-selected");
@@ -197,11 +220,9 @@ const storePlayersInfo = () => {
     }
     console.log("hola");
     sessionStorage.setItem('playersNames', JSON.stringify(playerInputs));
+    sessionStorage.setItem('playerCpu', cpuPlaying);
     sessionStorage.setItem('tokenP1Choice', JSON.stringify(tokensP1));
     sessionStorage.setItem('tokenP2Choice', JSON.stringify(tokensP2));
-    console.log(JSON.stringify(tokensP2));
-    console.log(JSON.stringify(tokensP1));
-    console.log(JSON.stringify(playerInputs));
     window.location.href = "../pages/game.html";
 }
 
