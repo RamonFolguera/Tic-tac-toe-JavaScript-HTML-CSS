@@ -206,10 +206,6 @@
     box-shadow: none;
 }
 
-.cpu {
-
-}
-
 @media(min-width: 576px) {
 
     .player-1-container, .player-2-container, .title-container {
