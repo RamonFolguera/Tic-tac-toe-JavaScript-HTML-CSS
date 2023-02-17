@@ -47,8 +47,8 @@ for (let tokenP2 in tokenP2Choice) {
     player2Token.id = "tokenElephantP2";
   } else if (tokenP2Choice.tokenMonkeyP2 === tokenP2) {
     player2Token.id = "tokenMonkeyP2";
-  } else if (tokenP2Choice.tokenRhinoP2 === tokenP2) {
-    player2Token.id = "tokenRhinoP2";
+  } else if (tokenP2Choice.tokenCocodrileP2 === tokenP2) {
+    player2Token.id = "tokenCocodrileP2";
   } else if (tokenP2Choice.tokenRhinoP2 === tokenP2) {
     player2Token.id = "tokenRhinoP2";
   }
