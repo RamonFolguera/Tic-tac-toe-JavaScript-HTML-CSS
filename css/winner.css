@@ -1,16 +1,24 @@
 
 .box {
-    height: 30vh;
+    height: 95% ;
     width: 100vw;
     font-size: 1.2rem;
     color: rgb(193, 5, 5); 
 }
-
-.row-1 {
+.left-section, .right-section{
     height: 30vh;
 }
+
+.board{
+    height: 40vh;
+}
+
+.row-1 {
+    height: 100%;
+}
 .row-player {
-    height: 20vh;
+    height: 85%;
+    width: 95%;
 }
 
 .player-2-turn, .player-1-turn {
@@ -86,6 +94,14 @@
         height: 100%;
         width: 100%;
     }
-
 }
 
+@media (min-width: 1200px){
+    .left-section, .right-section{
+        height: 85vh;
+    }
+    .box {
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+}

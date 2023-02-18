@@ -27,6 +27,9 @@ body {
     text-decoration: none;
     font-size: 1rem;
 }
+.player1-name-games, .player2-name-games {
+    width: 40%;
+}
 
 .row-1 {
     border-radius: 5px;
@@ -94,9 +97,9 @@ body {
     
 }
 
-.player-1-turn, .player-2-turn {
-    width: 45%;
-    height: 85%;
+.player-1-turn , .player-2-turn {
+    width: 50%;
+    height: 6em;
     box-shadow: inset 5px 5px 3px 2px rgba(0,0,0,0.5);
     border-radius: 5px;
     background-image: linear-gradient(rgba(255, 255, 255, 0.3),
@@ -104,12 +107,13 @@ body {
 }
 
 .player1-name-placeholder, .player2-name-placeholder {
+    font-size: 0.95rem;
     color: var(--red);
 }
 
 #tokenMonkeyP1, #tokenCocodrileP1, #tokenElephantP1 ,#tokenRhinoP1, #tokenMonkeyP2, #tokenCocodrileP2, #tokenElephantP2 ,#tokenRhinoP2{
-    height:100%;
-    width:100%;
+    height:85%;
+    width:85%;
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
@@ -132,7 +136,7 @@ body {
 }
 
 #monkey-token-panel, #cocodrile-token-panel, #elephant-token-panel, #tokenRhino-panel {
-    height:95%;
+    height:50%;
     width:50%;
     background-size: contain;
     background-position: center;
@@ -165,7 +169,7 @@ body {
 }
 
 .your-turn {
-    margin: 0;
+    font-size: 1rem;
     color: var(--red);
     
 }
@@ -191,8 +195,9 @@ body {
 }
 
 .games {
-    display:none;
+    width: 100%;
 }
+
 @media (min-width: 576px) {
 
     body {
@@ -304,9 +309,9 @@ body {
         font-size: 1.3rem;
     }
 
-    .games {
-        display:block;
+    .player1-name-games, .player2-name-games {
+        width: 100%;
+        height: 18%;
     }
-
 }
 

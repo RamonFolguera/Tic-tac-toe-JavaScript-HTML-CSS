@@ -18,17 +18,17 @@
     </div>
     <div class="container left-section d-flex justify-content-center align-items-center mt-0 mt-lg-5 ms-lg-5 me-lg-0">
         <div class="row left-section-content p-lg-3 text-start">
-            <div class="d-flex flex-column align-items-center flex-lg-row w-50 p-2">
+            <div class="player1-name-games d-flex flex-column align-items-start flex-lg-row p-2">
                 <div class="mb-lg-0 w-50 fs-5">
-                    <p class="mb-lg-0 mb-0 player1">PLAYER 1:</p>  
+                    <p class="mb-lg-0 mb-0 ms-2 player1">PLAYER 1:</p>  
                     <p class="player1-name-placeholder ms-2 mb-0"></p>
                 </div>
-                <div class="mb-lg-0 w-50 fs-5 ps-4">
-                    <p class="games mb-lg-0">GAMES:</p>  
-                    <p class="player1-games-placeholder ms-2">0</p>
+                <div class="mb-lg-0 w-50 fs-5 d-flex">
+                    <p class="games mb-lg-0 ms-2">GAMES:</p>  
+                    <p id="player1-games-placeholder" class="player1-games-placeholder ms-3">0</p>
                 </div>
             </div>
-            <div id="panel-player-1" class="player-1-turn d-flex justify-content-center align-items-center"></div>
+            <div id="panel-player-1" class="player-1-turn ps-4 d-flex justify-content-between align-items-center"></div>
             <div class="d-flex flex-column justify-content-between left-section-text"> 
                 <div class="text-center h-75 d-flex flex-column justify-content-between">
                     <p class="p1 mb-lg-2">TIC-TAC-TOE</p>
@@ -38,7 +38,7 @@
                     <p class="p3 mb-lg-0">YOU PLACE YOUR PIECE WHEN IT IS YOUR TURN</p>
                     <p class="p4 mb-lg-0">WHEN YOU PLACED YOUR THREE TAKE ONE AND</p>
                     <p class="p8 mb-lg-2">TRY ANOTHER TIME</p>
-                    <a class="go-back" href="../pages/players.html">GO BACK</a>
+                    <a id="goBack" class="go-back" href="../pages/players.html">GO BACK</a>
                 </div>
             </div>
         </div>
@@ -58,17 +58,17 @@
     </div>
     <div class="container right-section d-flex justify-content-center align-items-center mt-lg-5 me-lg-5 ms-lg-0">
         <div class="row right-section-content p-lg-3 text-start pt-2">
-            <div class="d-flex flex-column align-items-center flex-lg-row w-50 p-2">
+            <div class="player2-name-games d-flex flex-column align-items-start flex-lg-row p-2">
                 <div class="mb-lg-0 w-50 fs-5 ps-0 ">
-                    <p class="mb-lg-0 mb-0 player2">PLAYER 2:</p>  
+                    <p class="mb-lg-0 mb-0 ms-2 player2">PLAYER 2:</p>  
                     <p class="player2-name-placeholder ms-2 mb-0"></p>
                 </div>
-                <div class="mb-lg-0 w-50 fs-5 ps-4">
-                    <p class="games mb-lg-0">GAMES:</p>  
-                    <p class="player2-games-placeholder ms-2">0</p>
+                <div class="mb-lg-0 fs-5 games d-flex">
+                    <p class="mb-lg-0 ms-2">GAMES:</p>  
+                    <p id="player2-games-placeholder" class="player2-games-placeholder ms-2">0</p>
                 </div>
             </div>
-            <div id="panel-player-2" class="player-2-turn d-flex justify-content-center align-items-center"></div>
+            <div id="panel-player-2" class="player-2-turn ps-4 d-flex justify-content-center align-items-center"></div>
             <div class="d-flex flex-column justify-content-between right-section-text text-center"> 
                 <div class="h-75 d-flex flex-column justify-content-between">
                     <p class="p1 mb-lg-2">ADVENTURERS BEWARE:</p>

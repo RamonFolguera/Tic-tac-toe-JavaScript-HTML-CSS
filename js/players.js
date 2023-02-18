@@ -231,7 +231,7 @@ const storePlayersInfo = () => {
     sessionStorage.setItem('playerCpu', cpuPlaying);
     sessionStorage.setItem('tokenP1Choice', JSON.stringify(tokensP1));
     sessionStorage.setItem('tokenP2Choice', JSON.stringify(tokensP2));
-    // window.location.href = "../pages/game.html";
+    window.location.href = "../pages/game.html";
 }
 
 startBtn.addEventListener("click", storePlayersInfo);
