@@ -1,3 +1,14 @@
+//RESET button
+
+const resetBtn = document.getElementById("reset-game-btn");
+
+const resetPlayersInfo = () =>  {
+    window.location.href = "./players.html";
+    sessionStorage.clear();
+}
+
+resetBtn.addEventListener("click", resetPlayersInfo)
+
 //Getting players name from Inputs
 
 let playerInputs = {
@@ -35,34 +46,32 @@ let cpu2;
 let cpuPlaying = "";
 const inputP1 = document.querySelector(".player-1-input");
 const inputP2 = document.querySelector(".player-2-input");
+const cpuBtn1 = document.getElementById("cpuP1");
+const cpuBtn2 = document.getElementById("cpuP2");
 
 
 const chooseCpuP1 = () => {
     if(!cpu1) {
-        
         cpuPlaying = "cpu-player-1";
         cpuBtnP1.onclick = null;
         cpuBtnP2.onclick = null;
-        inputP1.remove();
+        inputP1.setAttribute('readonly', true);
         playerInputs.player1 = null;
-
-
+        cpuBtn1.classList.add("cpu-selected")
     } 
 }
 const chooseCpuP2 = () => {
 
-    if(!cpu2) {
-            
+    if(!cpu2) { 
         cpuPlaying = "cpu-player-2";
         cpuBtnP1.onclick = null;
         cpuBtnP2.onclick = null;
-        inputP2.remove();
+        inputP2.setAttribute('readonly', true);
         playerInputs.player2 = null;
+        cpuBtn2.classList.add("cpu-selected")
+
     }
 }
-
-console.log(cpu1)
-
 
 let tokensP1 = {
     tokenCocodrileP1 : "",
@@ -79,7 +88,6 @@ let tokensP2 = {
 
 let tokenDivsP1 = Array.from(document.getElementsByClassName("tokenP1"));
 let tokenDivsP2 = Array.from(document.getElementsByClassName("tokenP2"));
-
 
 const chooseToken = (chosenToken) => {
     
@@ -223,7 +231,7 @@ const storePlayersInfo = () => {
     sessionStorage.setItem('playerCpu', cpuPlaying);
     sessionStorage.setItem('tokenP1Choice', JSON.stringify(tokensP1));
     sessionStorage.setItem('tokenP2Choice', JSON.stringify(tokensP2));
-    window.location.href = "../pages/game.html";
+    // window.location.href = "../pages/game.html";
 }
 
 startBtn.addEventListener("click", storePlayersInfo);

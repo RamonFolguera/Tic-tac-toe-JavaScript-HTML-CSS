@@ -105,21 +105,30 @@
     color: var(--red);
 }
 
-.p-red-title {
+.p-red-title, .p-black-title {
     display: none;
 }
 
-.start-button {
-    padding: 30px 15px;
-    background-color: rgb(13, 44, 31);
-    box-shadow: 1px 1px 1px 1px black;
-    color: white;
-    border-radius: 50%;
-    text-decoration: none;
-    font-size: 1rem;
+.input-div {
+    width: 85%;
 }
 
-.start-button:hover {
+.buttons-container {
+    width: 50%;
+}
+
+.start-button, .reset-button {
+    padding: 5px 5px;
+    background-color: var(--green);
+    box-shadow: 1px 1px 1px 1px black;
+    color: white;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 1rem;
+    border: none;
+}
+
+.start-button:hover, .reset-button:hover {
     background-color: rgb(176, 237, 212);
     color: rgb(13, 44, 31);
     cursor:pointer;
@@ -205,14 +214,14 @@
 .human:active, .cpu:active{
     box-shadow: none;
 }
-
+.cpu-selected {
+    background-color: rgb(176, 237, 212);
+    color: var(--green);
+}
 @media(min-width: 576px) {
 
     .player-1-container, .player-2-container, .title-container {
         height: 40vh;
-    }
-    .p-red-title {
-        display: block;
     }
 
     .start-button {
@@ -231,6 +240,43 @@
 }
 
 @media (min-width: 992px) {
+    body {
+        height: 85vh;
+    }
+    .main-box {
+        position: relative;
+        height: 100%;
+    }
+    
+    .row-container1 {
+        width: 95vw;
+        height: 40%;
+    }
+    
+    .row-container2 {
+        width: 95vw;
+        height: 60%;
+    }
+
+    .input-div {
+        width: 90%;
+    }
+
+    .start-button, .reset-button {
+        padding: 30px 15px;
+        background-color: rgb(13, 44, 31);
+        box-shadow: 1px 1px 1px 1px black;
+        color: white;
+        border-radius: 50%;
+        text-decoration: none;
+        font-size: 1rem;
+    }
+    
+    .start-button:hover {
+        background-color: rgb(176, 237, 212);
+        color: rgb(13, 44, 31);
+        cursor:pointer;
+    }
 
     .player-token-selected {
         transform: scale(200%);
@@ -241,19 +287,39 @@
         transition: 2s;
     }
 
-    .row-container {
-        width: 85vw;
-    }
-
     .player-1-container, .player-2-container{ 
-        height: 50vh;
+        height: 100%;
     }
 
     .title-container {
-        height: 30vh;
+        display: flex;
+        align-items: center;
+        height: 100%;
+    }
+
+    .title-content {
+        height: 85%;
+    }
+
+    .p-titles {
+        height: 100%;
+        width: 95%;
+    }
+
+    .p-red-title, .p-black-title {
+        font-size: 1.5rem;
+        display: block;
+    }
+
+    .p-black-title {
+        font-size: 1.4rem;
     }
 
     .p-red-title {
-        font-size: 1.5rem;
+        font-size: 1.8rem;
+    }
+
+    .buttons-container {
+        width: 25%;
     }
 }
