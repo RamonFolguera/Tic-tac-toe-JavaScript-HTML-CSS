@@ -24,8 +24,8 @@ body {
 
 .main-box {
     margin-top: 50px;
-    height: 70vh;
-    width: 90%;
+    height: 472px;
+    width:361px;
 }
 
 .box-flap {
@@ -60,7 +60,10 @@ body {
 .with-music, .without-music {
     display:none;
 }
-
+.box-flap-1, .box-flap-2 {
+    background-repeat: no-repeat;
+    background-size: cover;
+}
 
 @media (min-width: 576px) {
 
@@ -71,8 +74,8 @@ body {
     .main-box {
         position:relative;
         margin-top: 50px;
-        height: 90vh;
-        width: 60vw;
+        height: 472px;
+        width: 608px;
     }
 
     .music-links {
@@ -91,35 +94,13 @@ body {
         color: rgb(193, 5, 5);
     }
 
-    .box-flap-1, .box-flap-2 {
-        background-repeat: no-repeat;
-        background-size: cover;
-    }
-    
-
-}
-
-@media (min-width: 1200px) {
-
+   
     .box-flap-1 {
         background-image: url(../img/jumanji-top-cover.png);
     }
 
     .box-flap-2 {
         background-image: url(../img/jumanji-bottom-cover2.png);
-    }
-
-    .row-1::before {
-        content: "";
-        position:absolute;
-        width: 90%;
-        height: 90%;
-        top: 5%;
-        left: 5%;
-        background-image: url(../img/board.JPG);
-        background-size: cover;
-        background-repeat: no-repeat;
-        z-index: -1;
     }
 
     .box-flap-1:hover {
@@ -134,11 +115,43 @@ body {
         transition-duration: 2s;
     }
 
-    .box-flap-1, .box-flap-2 {
-        background-repeat: no-repeat;
+    .row-1::before {
+        content: "";
+        position:absolute;
+        width: 96%;
+        height: 90%;
+        top: 5%;
+        left: 12px;
+        background-image: url(../img/board.JPG);
         background-size: cover;
+        background-repeat: no-repeat;
+        z-index: -1;
+    }
 }
 
+@media (min-width: 1200px) {
+
+    .main-box {
+        height: 600px;
+        width: 772px;
+    }
+
+    .row-1::before {
+        content: "";
+        position:absolute;
+        width: 97%;
+        height: 90%;
+        top: 5%;
+        left: 12px;
+        background-image: url(../img/board.JPG);
+        background-size: cover;
+        background-repeat: no-repeat;
+        z-index: -1;
+    }
+
+ 
+
+ 
 .with-music, .without-music {
     display: block;
     width: 100%;

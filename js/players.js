@@ -46,8 +46,7 @@ let cpu2;
 let cpuPlaying = "";
 const inputP1 = document.querySelector(".player-1-input");
 const inputP2 = document.querySelector(".player-2-input");
-const cpuBtn1 = document.getElementById("cpuP1");
-const cpuBtn2 = document.getElementById("cpuP2");
+
 
 
 const chooseCpuP1 = () => {
@@ -57,7 +56,7 @@ const chooseCpuP1 = () => {
         cpuBtnP2.onclick = null;
         inputP1.setAttribute('readonly', true);
         playerInputs.player1 = null;
-        cpuBtn1.classList.add("cpu-selected")
+        cpuBtnP1.classList.add("cpu-selected")
     } 
 }
 const chooseCpuP2 = () => {
@@ -68,7 +67,7 @@ const chooseCpuP2 = () => {
         cpuBtnP2.onclick = null;
         inputP2.setAttribute('readonly', true);
         playerInputs.player2 = null;
-        cpuBtn2.classList.add("cpu-selected")
+        cpuBtnP2.classList.add("cpu-selected")
 
     }
 }
@@ -150,7 +149,6 @@ const chooseToken = (chosenToken) => {
             document.getElementById("tokenRhinoP1").onclick = null;
         }
     }
-
 }
 
 // Adding start button to a variable
@@ -169,11 +167,11 @@ const createMissingNamesMessage = () => {
     btnNamesMissing.innerHTML="OK";
     pNamesMissingContainer.appendChild(pNamesMissingDiv); 
     pNamesMissingDiv.appendChild(pNamesMissing);
-    pNamesMissingDiv.appendChild(btnNamesMissing)
-    pNamesMissingDiv.classList.add("message-btn-container")
+    pNamesMissingDiv.appendChild(btnNamesMissing);
+    pNamesMissingDiv.classList.add("message-btn-container");
     pNamesMissingContainer.classList.add("names-missing-container");
     pNamesMissing.classList.add("names-missing");
-    pNamesMissing.innerHTML="SOMETHING IS MISSING! WE CAN'T START WITHOUT THE PLAYER'S NAMES! GO BACK AND TRY AGAIN!"
+    pNamesMissing.innerHTML="SOMETHING IS MISSING! WE CAN'T START WITHOUT THE PLAYER'S NAMES! GO BACK AND TRY AGAIN!";
     bodyElement.appendChild(pNamesMissingContainer);
 }
 
@@ -202,7 +200,6 @@ const createMissingTokenMessage = () => {
     pTokenMissing.innerHTML="SOMETHING IS MISISNG! WE CAN'T START UNTIL YOU SELECT A TOKEN TO PLAY WITH! GO BACK AND TRY AGAIN!"
     bodyElement.appendChild(pTokenMissingContainer);
 }
-console.log(JSON.stringify(tokensP2));
 //Function to close the missing tokens pop up
 const closeMissingTokenMessage = () => {
     pTokenMissingContainer.remove();

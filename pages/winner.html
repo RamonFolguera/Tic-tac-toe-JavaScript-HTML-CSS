@@ -12,6 +12,9 @@
     <title>Winner</title>
 </head>
 <body>
+    <audio id="drums-sound">
+        <source src="../audio/Jumanji - Drums.mp3"></source>
+    </audio>
     <div class="container left-section d-flex justify-content-center align-items-center mt-lg-5 ms-lg-5 me-lg-0">
         <div class="row row-player left-section-content p-lg-3 text-start d-flex justify-content-center flex-row text-center pt-2">
             <p class="mb-lg-0 fs-5 mb-0">PLAYER 1:<span class="player1-name-placeholder"></span></p>
@@ -23,7 +26,7 @@
     <div class="container board d-flex justify-content-center align-items-center mt-lg-5">
         <div class="row row-1 d-flex justify-content-center align-items-center">
             <div id="winner-panel" class="col-12 box d-flex flex-column justify-content-center align-items-center pt-5 pb-5">
-                <a class="play-again mb-3" href="../pages/game.html">PLAY AGAIN</a>
+                <div id="playAgainBtn" class="play-again mb-3" >PLAY AGAIN</div>
             </div>
         </div>
     </div>

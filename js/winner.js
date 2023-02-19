@@ -4,10 +4,20 @@ let nameP2Placeholder = document.querySelector(".player2-name-placeholder");
 
 // Assigning the data from sessionStorage to a variable
 let playerNames = JSON.parse(sessionStorage.getItem('playersNames'));
+let cpuPlaying = sessionStorage.getItem("playerCpu");
 
 // Adding the text to the span element
-nameP1Placeholder.innerHTML = `${playerNames.player1.toUpperCase()}`;
-nameP2Placeholder.innerHTML = `${playerNames.player2.toUpperCase()}`;
+if (playerNames.player1 === null) {
+    nameP1Placeholder.innerHTML = "CPU";
+    } else {
+    nameP1Placeholder.innerHTML = `${playerNames.player1.toUpperCase()}`;
+    }
+
+if (playerNames.player2 === null) {
+    nameP2Placeholder.innerHTML = "CPU";
+    } else {
+    nameP2Placeholder.innerHTML = `${playerNames.player2.toUpperCase()}`;
+    }
 
 //Assigning the winner their token choice data from sessionStorage to a variable
 
@@ -45,16 +55,59 @@ const showWinner = () => {
     winnerPar.innerHTML = `CONGRATULATIONS ${sessionStorage.getItem("Winner").toUpperCase()}. YOU WIN!`;
     winnerPanelDiv.appendChild(winnerPar)
 
-    if(sessionStorage.getItem("Winner") === playerNames.player1 ) {
+console.log(sessionStorage.getItem("Winner") === "cpu-player-1")
+    if ((sessionStorage.getItem("Winner") === playerNames.player1) || 
+        (sessionStorage.getItem("Winner") === "cpu-player-1")) {
+console.log("p1 wins!")
     let winnerP1TokenDiv = document.querySelector(".winner-tokenP1");
     winnerP1TokenDiv.id = sessionStorage.getItem("tokenWinnerP1");
 
     } else {
+        console.log("p2 wins!")
 
     let winnerP2TokenDiv = document.querySelector(".winner-tokenP2");
     winnerP2TokenDiv.id = sessionStorage.getItem("tokenWinnerP2");
+    
     }
+    
+
+
+
+
+
+
+    // if(sessionStorage.getItem("Winner") === playerNames.player1 ) {
+    //     let winnerP1TokenDiv = document.querySelector(".winner-tokenP1");
+    //     winnerP1TokenDiv.id = sessionStorage.getItem("tokenWinnerP1");
+    
+    //     } else {
+    
+    //     let winnerP2TokenDiv = document.querySelector(".winner-tokenP2");
+    //     winnerP2TokenDiv.id = sessionStorage.getItem("tokenWinnerP2");
+    //     }
     
 }
 
-window.onload = () => showWinner();
+window.onload = () => {
+    showWinner();
+}
+
+const playDrums = () => {
+    const audioDiv = document.getElementById("drums-sound");
+    audioDiv.play();
+}
+
+const playAgain = () => {
+    const myTimeout = setTimeout(moveToGamePage, 5000);
+    playDrums()
+}
+
+const moveToGamePage = () => {
+    window.location.href = "../pages/game.html";
+}
+const playAgainBtn = document.getElementById("playAgainBtn")
+playAgainBtn.addEventListener("click", playAgain)
+
+
+
+

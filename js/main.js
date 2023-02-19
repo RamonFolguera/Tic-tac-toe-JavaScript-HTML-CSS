@@ -10,7 +10,7 @@ const playSound = () => audioDiv.play();
 const stopSound = () => audioDiv.pause();
 
 const musicOn = () => {
-
+console.log("music on");
     for(const boxFlap of boardGameBox) {
         boxFlap.addEventListener("mouseover", playSound);
         boxFlap.addEventListener("mouseout", stopSound);
@@ -19,8 +19,11 @@ const musicOn = () => {
 
 const musicOff = () => {
     console.log("music off");
-        // return stopSound();
+
+    window.location.href = "./index.html";
+
 };
 
 withMusicAnch.addEventListener("click", musicOn);
 withoutMusicAnch.addEventListener("click", musicOff);
+
