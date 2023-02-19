@@ -27,6 +27,7 @@ body {
     text-decoration: none;
     font-size: 1rem;
 }
+
 .player1-name-games, .player2-name-games {
     width: 40%;
 }
@@ -194,8 +195,8 @@ body {
     display:none !important;
 }
 
-.games {
-    width: 100%;
+.go-back, .start-again {
+    display: none;
 }
 
 @media (min-width: 576px) {
@@ -219,36 +220,39 @@ body {
     .row-1 {
         border-radius: 5px;
         border: 1px solid black;
-        height: 80vh;
-        width: 600px;
+        height: 55vh;
+        width: 25em;
         box-shadow: 1px 1px 2px 2px rgb(0, 0, 0, 0.5) inset;
     }
 
     /* Section to both sides of the board to show players turns and some more info */
 
     .left-section, .right-section {
-        height: 80vh;
+        height: 55vh;
         width: 100%;
         border-radius: 5px;
     }
 
     .left-section-content, .right-section-content {
+        display:flex;
+        align-items: center;
         height: 90%;
         width: 95%;
         border-radius: 10px;
     }
 
     .player-1-turn, .player-2-turn {
-        height: 25%;
+        height: 40%;
+        width: 95%;
     }
     .right-section-text, .left-section-text {
         height: 75%;
     }
-}
 
-
-@media (min-width:1200px) {
-
+    .player1-name-games, .player2-name-games {
+        width: 100%;
+        height: 18%;
+    }
     .go-back, .start-again {
         padding: 10px 5px;
         background-color: rgb(13, 44, 31);
@@ -258,6 +262,48 @@ body {
         text-decoration: none;
         font-size: 1rem;
     }
+    
+    .go-back, .start-again {
+        display:flex;
+        justify-content: center;
+    }
+}
+@media (min-width: 1200px) {
+
+    body {
+       
+        display:flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .left-section-content, .right-section-content {
+        display: flex;
+        align-items: center;
+        width: 95%;
+        border-radius: 10px;
+    }
+
+    .player-1-turn, .player-2-turn {
+        height: 65%;
+        width: 95%;
+    }
+    .left-section, .right-section {
+        height: 75vh;
+        width: 100%;
+        border-radius: 5px;
+    }
+    .board {
+        width: 35em;
+    }
+    .row-1 {
+        height: 75vh;
+        width: 35em;
+    }
+   
+}
+
+@media (min-width:1500px) {
 
     .left-section-content, .right-section-content {
         height: 95%;
@@ -283,7 +329,10 @@ body {
     .player1-name-placeholder, .player2-name-placeholder {
         font-size: 1.5rem;
     }
-
+    
+    .board {
+        width: 650px;
+    }
     .row-1 {
         height: 85vh;
         width: 650px;
@@ -293,25 +342,25 @@ body {
         padding-left: 20px;
         font-size: 1.5rem;
         color:rgb(13, 44, 31);
-
     }
+
     .left-section-text, .right-section-text {
-        height: 60%;
-        display:block !important;
+        margin-top: 10px;
+        height: 50%;
+        display:flex !important;
         font-size: 1rem;   
     }
-
+    .go-back, .start-again {
+        display:flex;
+        justify-content: center;
+    }
     .p1 {
-        font-size: 1.6rem;
+        font-size: 1.4rem;
     }
     
     .p3, .p6, .p8 {
-        font-size: 1.3rem;
+        font-size: 1.2rem;
     }
 
-    .player1-name-games, .player2-name-games {
-        width: 100%;
-        height: 18%;
-    }
 }
 

@@ -55,37 +55,17 @@ const showWinner = () => {
     winnerPar.innerHTML = `CONGRATULATIONS ${sessionStorage.getItem("Winner").toUpperCase()}. YOU WIN!`;
     winnerPanelDiv.appendChild(winnerPar)
 
-console.log(sessionStorage.getItem("Winner") === "cpu-player-1")
     if ((sessionStorage.getItem("Winner") === playerNames.player1) || 
         (sessionStorage.getItem("Winner") === "cpu-player-1")) {
-console.log("p1 wins!")
     let winnerP1TokenDiv = document.querySelector(".winner-tokenP1");
     winnerP1TokenDiv.id = sessionStorage.getItem("tokenWinnerP1");
 
     } else {
-        console.log("p2 wins!")
 
     let winnerP2TokenDiv = document.querySelector(".winner-tokenP2");
     winnerP2TokenDiv.id = sessionStorage.getItem("tokenWinnerP2");
     
     }
-    
-
-
-
-
-
-
-    // if(sessionStorage.getItem("Winner") === playerNames.player1 ) {
-    //     let winnerP1TokenDiv = document.querySelector(".winner-tokenP1");
-    //     winnerP1TokenDiv.id = sessionStorage.getItem("tokenWinnerP1");
-    
-    //     } else {
-    
-    //     let winnerP2TokenDiv = document.querySelector(".winner-tokenP2");
-    //     winnerP2TokenDiv.id = sessionStorage.getItem("tokenWinnerP2");
-    //     }
-    
 }
 
 window.onload = () => {
