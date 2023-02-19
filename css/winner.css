@@ -25,19 +25,24 @@
     height: 50%;
 }
 
+.again-back {
+    width: 95%;
+}
+
 .play-again {
-    padding: 30px 15px;
+    padding: 15px 15px;
     background-color: rgb(13, 44, 31);
     box-shadow: 1px 1px 1px 1px black;
     color: white;
-    border-radius: 50%;
+    border-radius: 20px;
     text-decoration: none;
-    font-size: 1rem;
+    font-size: 0.8rem;
 }
 
 .play-again:hover {
     background-color: rgb(176, 237, 212);
     color: rgb(13, 44, 31);
+    cursor: pointer;
 }
 
 .play-again:active {
@@ -45,24 +50,29 @@
 }
 
 @media (min-width: 576px){
+   
+    .board{
+        height: 55vh;
+    }
+
+    .left-section, .right-section{
+        height: 55vh;
+    }
 
     .play-again {
-        padding: 50px 20px;
-        background-color: rgb(13, 44, 31);
-        box-shadow: 1px 1px 1px 1px black;
-        color: white;
-        border-radius: 50%;
-        text-decoration: none;
+        padding: 20px 20px;
         font-size: 1rem;
+    }
+
+    .again-back {
+        width: 85%;
     }
 
     .box {
         height: 100%;
-        font-size: 3rem;
+        font-size: 1.5rem;
     }
-    .board {
-        height: 95%;
-    }
+    
     .row-1 {
         height: 100%;
     }
@@ -97,7 +107,20 @@
 }
 
 @media (min-width: 1200px){
-    .left-section, .right-section{
+
+    .again-back {
+        width: 60%;
+    }
+
+    .play-again {
+        padding: 30px 20px;
+        font-size: 1.1rem;
+    }
+    .box {
+        font-size: 3rem;
+    }
+
+    .left-section, .right-section, .board{
         height: 85vh;
     }
     .box {

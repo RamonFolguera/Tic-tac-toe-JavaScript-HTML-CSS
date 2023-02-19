@@ -57,7 +57,7 @@ body {
     text-shadow: 0px 1px 0px rgb(0, 0, 0);
 } 
 
-.with-music, .without-music {
+.with-music, .without-music, .music-links p {
     display:none;
 }
 .box-flap-1, .box-flap-2 {
@@ -149,10 +149,7 @@ body {
         z-index: -1;
     }
 
- 
-
- 
-.with-music, .without-music {
+.with-music, .without-music, .music-links p {
     display: block;
     width: 100%;
 }

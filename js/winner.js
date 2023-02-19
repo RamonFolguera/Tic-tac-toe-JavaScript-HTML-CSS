@@ -85,9 +85,14 @@ const playAgain = () => {
 const moveToGamePage = () => {
     window.location.href = "../pages/game.html";
 }
-const playAgainBtn = document.getElementById("playAgainBtn")
-playAgainBtn.addEventListener("click", playAgain)
+const playAgainBtn = document.getElementById("playAgainBtn");
+playAgainBtn.addEventListener("click", playAgain);
 
+const moveToMain = () => {
+    window.location.href = "../index.html";
+    localStorage.clear();
+}
 
-
+const backToMainBtn = document.getElementById("backToMain");
+backToMainBtn.addEventListener("click", moveToMain);
 

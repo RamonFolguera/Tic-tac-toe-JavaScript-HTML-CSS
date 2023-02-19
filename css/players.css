@@ -214,30 +214,25 @@
 .human:active, .cpu:active{
     box-shadow: none;
 }
+
 .cpu-selected {
     background-color: rgb(176, 237, 212);
     color: var(--green);
 }
-@media(min-width: 576px) {
 
-    .player-1-container, .player-2-container, .title-container {
-        height: 40vh;
-    }
-
-    .start-button {
-        padding: 40px 25px;
-        font-size: 1.5rem;
+@media (min-width: 576px) {
+    .p-titles {
+        height: 100%;
+        width: 95%;
     }
 
-    .player-1-container {
-        border-bottom-left-radius: 15px;
+    .p-red-title, .p-black-title {
+        font-size: 0.8rem;
+        display: block;
     }
-    
-    .player-2-container {
-        border-bottom-left-radius: 0;
-        border-bottom-right-radius: 15px;
-    }
+
 }
+
 
 @media (min-width: 992px) {
     body {
