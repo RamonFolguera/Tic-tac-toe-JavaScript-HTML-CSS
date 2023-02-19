@@ -311,7 +311,7 @@ const checkWinner = () => {
         sessionStorage.setItem("tokenWinnerP1", player1Token.id);
         showScoreCount();
         winnerCpuOrHumanP1();
-        // window.location.href = "../pages/winner.html";
+        window.location.href = "../pages/winner.html";
         return true;
       } else if (
         boardCheck[winningComb[i][0]] === "o" &&
@@ -323,7 +323,7 @@ const checkWinner = () => {
         sessionStorage.setItem("tokenWinnerP2", player2Token.id);
         showScoreCount();
         winnerCpuOrHumanP2();
-        // window.location.href = "../pages/winner.html";
+        window.location.href = "../pages/winner.html";
         return true;
       }
     }

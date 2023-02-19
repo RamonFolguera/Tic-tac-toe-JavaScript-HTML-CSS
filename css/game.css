@@ -271,7 +271,6 @@ body {
 @media (min-width: 990px) {
 
     body {
-       
         display:flex;
         justify-content: center;
         align-items: center;
@@ -355,11 +354,11 @@ body {
         justify-content: center;
     }
     .p1 {
-        font-size: 1.2rem;
+        font-size: 1.1rem;
     }
     
     .p3, .p6, .p8 {
-        font-size: 1rem;
+        font-size: 0.9rem;
     }
 
 }
