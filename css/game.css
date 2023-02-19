@@ -355,11 +355,11 @@ body {
         justify-content: center;
     }
     .p1 {
-        font-size: 1.4rem;
+        font-size: 1.2rem;
     }
     
     .p3, .p6, .p8 {
-        font-size: 1.2rem;
+        font-size: 1rem;
     }
 
 }
