@@ -268,7 +268,7 @@ body {
         justify-content: center;
     }
 }
-@media (min-width: 1200px) {
+@media (min-width: 990px) {
 
     body {
        
@@ -303,7 +303,7 @@ body {
    
 }
 
-@media (min-width:1500px) {
+@media (min-width:1200px) {
 
     .left-section-content, .right-section-content {
         height: 95%;

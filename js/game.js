@@ -2,7 +2,6 @@
 let nameP1Placeholder = document.querySelector(".player1-name-placeholder");
 let nameP2Placeholder = document.querySelector(".player2-name-placeholder");
 
-
 //Counting game scores...
 let gameScoresP1 = document.getElementById("player1-games-placeholder");
 let gameScoresP2 = document.getElementById("player2-games-placeholder");
@@ -120,9 +119,8 @@ let randomCell = 0;
 
 cells.map((cell) => {
   cell.addEventListener("click", () => {
-     //human1 vs cpu
+    //human1 vs cpu
     if (playerNames.player2 === null) {
-      console.log("adios");
       let i = 0;
       if (cell.innerHTML === "" && (tokenP1 > 0 || tokenP2 > 0)) {
         cell.appendChild(player1Token.cloneNode(true));
@@ -133,78 +131,68 @@ cells.map((cell) => {
         checkWinner();
         turn = !turn;
       }
-      if((cell.innerHTML != "") && (tokenP1 === 0 && tokenP2 === 0)) {
-          if((turn) && (boardCheck[cell.id] === "x")) {
-              cell.innerHTML = ""
-              tokenP1++
-              boardCheck[cell.id] = "";
-            } 
+      if (cell.innerHTML != "" && tokenP1 === 0 && tokenP2 === 0) {
+        if (turn && boardCheck[cell.id] === "x") {
+          cell.innerHTML = "";
+          tokenP1++;
+          boardCheck[cell.id] = "";
         }
-        //cpu starts its action
-        while (i === 0 && (tokenP1 > 0 || tokenP2 > 0) && (!turn)) {
-          randomCell = Math.floor(Math.random() * 9);
+      }
+      //cpu starts its action
+      while (i === 0 && (tokenP1 > 0 || tokenP2 > 0) && !turn) {
+        randomCell = Math.floor(Math.random() * 9);
 
         if (boardCheck[randomCell] === "") {
-            cpuCellChoice = document.getElementById(randomCell);
-            cpuCellChoice.appendChild(player2Token.cloneNode(true));
-            panelP1.appendChild(yourTurnPar);
-            panelP1.appendChild(player1Token);
-            boardCheck[randomCell] = "o";
-            console.log(boardCheck);
-            checkWinner();
-            i = 1;
-            tokenP2--;
-            turn = !turn;
+          cpuCellChoice = document.getElementById(randomCell);
+          cpuCellChoice.appendChild(player2Token.cloneNode(true));
+          panelP1.appendChild(yourTurnPar);
+          panelP1.appendChild(player1Token);
+          boardCheck[randomCell] = "o";
+          checkWinner();
+          i = 1;
+          tokenP2--;
+          turn = !turn;
         } else {
-            i = 0;
+          i = 0;
         }
-        }
-        i = 0;
+      }
+      i = 0;
 
-       
-        while (i === 0 && (tokenP1 === 0 && tokenP2 === 0) && (!turn)) {
-            
+      while (i === 0 && tokenP1 === 0 && tokenP2 === 0 && !turn) {
+        randomCell = Math.floor(Math.random() * 9);
+
+        if (boardCheck[randomCell] === "o") {
+          cpuCellChoice = document.getElementById(randomCell);
+          cpuCellChoice.innerHTML = "";
+          tokenP2++;
+          boardCheck[randomCell] = "";
+
+          while (j === 0) {
             randomCell = Math.floor(Math.random() * 9);
-                
-            if (boardCheck[randomCell] === "o") {
-                
+            if (boardCheck[randomCell] === "") {
               cpuCellChoice = document.getElementById(randomCell);
-              cpuCellChoice.innerHTML = ""
-                tokenP2++
-                boardCheck[randomCell] = "";
 
-                while (j === 0) {
-                    randomCell = Math.floor(Math.random() * 9);
-                    if (boardCheck[randomCell] === "") {
-              cpuCellChoice = document.getElementById(randomCell);
-            
-            cpuCellChoice.appendChild(player2Token.cloneNode(true));
-            panelP1.appendChild(yourTurnPar);
-            panelP1.appendChild(player1Token);
-            boardCheck[randomCell] = "o";
-            console.log(boardCheck);
-            checkWinner();
-            j = 1;
-            tokenP2--;
-            turn = !turn;
-              
-            }
-            
-           else {
+              cpuCellChoice.appendChild(player2Token.cloneNode(true));
+              panelP1.appendChild(yourTurnPar);
+              panelP1.appendChild(player1Token);
+              boardCheck[randomCell] = "o";
+              checkWinner();
+              j = 1;
+              tokenP2--;
+              turn = !turn;
+            } else {
               j = 0;
+            }
           }
-          }
-      
-        }else {
-            i = 0;
+        } else {
+          i = 0;
         }
-    }
-        i = 0;
-        j = 0;
-    
-    //cpu vs human2
+      }
+      i = 0;
+      j = 0;
+
+      //cpu vs human2
     } else if (playerNames.player1 === null) {
-      console.log("hola");
       let i = 0;
       if (cell.innerHTML === "" && (tokenP1 > 0 || tokenP2 > 0)) {
         cell.appendChild(player2Token.cloneNode(true));
@@ -213,75 +201,66 @@ cells.map((cell) => {
         tokenP2--;
         boardCheck[cell.id] = turn ? "o" : "x";
         checkWinner();
-        console.log(boardCheck);
-
         turn = !turn;
       }
-      if((cell.innerHTML != "") && (tokenP1 === 0 && tokenP2 === 0)) {
-          if((turn) && (boardCheck[cell.id] === "o")) {
-              cell.innerHTML = ""
-              tokenP2++
-              boardCheck[cell.id] = "";
-            } 
+      if (cell.innerHTML != "" && tokenP1 === 0 && tokenP2 === 0) {
+        if (turn && boardCheck[cell.id] === "o") {
+          cell.innerHTML = "";
+          tokenP2++;
+          boardCheck[cell.id] = "";
         }
-        //cpu starts its action
-        while (i === 0 && (tokenP1 > 0 || tokenP2 > 0) && (!turn)) {
-          randomCell = Math.floor(Math.random() * 9);
+      }
+      //cpu starts its action
+      while (i === 0 && (tokenP1 > 0 || tokenP2 > 0) && !turn) {
+        randomCell = Math.floor(Math.random() * 9);
 
         if (boardCheck[randomCell] === "") {
-            cpuCellChoice = document.getElementById(randomCell);
-            cpuCellChoice.appendChild(player1Token.cloneNode(true));
-            panelP2.appendChild(yourTurnPar);
-            panelP2.appendChild(player2Token);
-            boardCheck[randomCell] = "x";
-            checkWinner();
-            console.log(boardCheck);
-
-            i = 1;
-            tokenP1--;
-            turn = !turn;
+          cpuCellChoice = document.getElementById(randomCell);
+          cpuCellChoice.appendChild(player1Token.cloneNode(true));
+          panelP2.appendChild(yourTurnPar);
+          panelP2.appendChild(player2Token);
+          boardCheck[randomCell] = "x";
+          checkWinner();
+          i = 1;
+          tokenP1--;
+          turn = !turn;
         } else {
-            i = 0;
+          i = 0;
         }
-        }
-        i = 0;
+      }
+      i = 0;
+      while (i === 0 && tokenP1 === 0 && tokenP2 === 0 && !turn) {
+        randomCell = Math.floor(Math.random() * 9);
 
-        while (i === 0 && (tokenP1 === 0 && tokenP2 === 0) && (!turn)) {
-            
+        if (boardCheck[randomCell] === "x") {
+          cpuCellChoice = document.getElementById(randomCell);
+          cpuCellChoice.innerHTML = "";
+          tokenP1++;
+          boardCheck[randomCell] = "";
+
+          while (j === 0) {
             randomCell = Math.floor(Math.random() * 9);
-                
-            if (boardCheck[randomCell] === "x") {
-                
+            if (boardCheck[randomCell] === "") {
               cpuCellChoice = document.getElementById(randomCell);
-              cpuCellChoice.innerHTML = ""
-                tokenP1++
-                boardCheck[randomCell] = "";
 
-                while (j === 0) {
-                    randomCell = Math.floor(Math.random() * 9);
-                    if (boardCheck[randomCell] === "") {
-              cpuCellChoice = document.getElementById(randomCell);
-            
-            cpuCellChoice.appendChild(player1Token.cloneNode(true));
-            panelP2.appendChild(yourTurnPar);
-            panelP2.appendChild(player2Token);
-            boardCheck[randomCell] = "x";
-            checkWinner();
-            j = 1;
-            tokenP1--;
-            turn = !turn;
-              
+              cpuCellChoice.appendChild(player1Token.cloneNode(true));
+              panelP2.appendChild(yourTurnPar);
+              panelP2.appendChild(player2Token);
+              boardCheck[randomCell] = "x";
+              checkWinner();
+              j = 1;
+              tokenP1--;
+              turn = !turn;
             } else {
               j = 0;
+            }
           }
-          }
-      
-        }else {
-            i = 0;
+        } else {
+          i = 0;
         }
-    }
-        i = 0;
-        j = 0;
+      }
+      i = 0;
+      j = 0;
 
       //human1 vs human2
     } else if (playerNames.player2 != null && playerNames.player2 != null) {
@@ -317,7 +296,6 @@ cells.map((cell) => {
   });
 });
 
-
 //Function to check all the possible winner combinations everytime we click on a cell
 const checkWinner = () => {
   for (let i = 0; i < winningComb.length; i++) {
@@ -327,65 +305,55 @@ const checkWinner = () => {
         boardCheck[winningComb[i][1]] === "x" &&
         boardCheck[winningComb[i][2]] === "x"
       ) {
-        scoreCounterP1 ++;
-        localStorage.setItem("scoreP1" , scoreCounterP1);
+        console.log("what?");
+        scoreCounterP1++;
+        localStorage.setItem("scoreP1", scoreCounterP1);
         sessionStorage.setItem("tokenWinnerP1", player1Token.id);
-        showScoreCount()
-        winnerCpuOrHumanP1()
-        window.location.href = "../pages/winner.html";
-        
+        showScoreCount();
+        winnerCpuOrHumanP1();
+        // window.location.href = "../pages/winner.html";
         return true;
       } else if (
         boardCheck[winningComb[i][0]] === "o" &&
         boardCheck[winningComb[i][1]] === "o" &&
         boardCheck[winningComb[i][2]] === "o"
       ) {
-        scoreCounterP2 ++;
+        scoreCounterP2++;
         localStorage.setItem("scoreP2", scoreCounterP2);
         sessionStorage.setItem("tokenWinnerP2", player2Token.id);
-        showScoreCount()
-        winnerCpuOrHumanP2()
-        window.location.href = "../pages/winner.html";
+        showScoreCount();
+        winnerCpuOrHumanP2();
+        // window.location.href = "../pages/winner.html";
         return true;
       }
     }
   }
 };
 
-console.log(cpuPlaying);
 const winnerCpuOrHumanP1 = () => {
   if (playerNames.player1 === null) {
-    console.log("cpu wins");
-  
     sessionStorage.setItem("Winner", cpuPlaying);
   } else {
-    console.log("humano");
     sessionStorage.setItem("Winner", playerNames.player1);
   }
-}
+};
 
 const winnerCpuOrHumanP2 = () => {
-  console.log("player2 wins");
-  console.log(playerNames.player2 === null);
   if (playerNames.player2 === null) {
-    console.log("player 2 cpu wins");
     sessionStorage.setItem("Winner", cpuPlaying);
   } else {
     sessionStorage.setItem("Winner", playerNames.player2);
   }
-}
-
-
+};
 
 const showScoreCount = () => {
   gameScoresP1.innerHTML = scoreCounterP1;
   gameScoresP2.innerHTML = scoreCounterP2;
+};
 
-}
-
-const resetBtn = () => {
+const resetScores = () => {
   localStorage.clear();
-}
+};
 
 let goBackBtn = document.getElementById("goBack");
-goBackBtn.addEventListener("click", resetBtn)
+goBackBtn.addEventListener("click", resetScores);
