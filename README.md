@@ -58,7 +58,9 @@ To start the game when you are ready just need to click on START. If you forgot 
 |This is the last page, where the winner recieves a congratulations message, and their token shows with a rotating effect. Players can click play again and add their win to the score counter, or click go back to main page.|
 ![image](./img/screenshot8.JPG)
 
-
+|Welcome page - Small screen version|Payers page - Small screen version|Game page - Small screen version|Winner page - Small screen version|
+|-|-|-|-|
+|![image](./img/screenshot12.JPG)|![image](./img/screenshot9.JPG)|![image](./img/screenshot10.JPG)|![image](./img/screenshot11.JPG)|
 
 ### Links
 

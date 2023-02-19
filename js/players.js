@@ -1,5 +1,4 @@
 //RESET button
-
 const resetBtn = document.getElementById("reset-game-btn");
 
 const resetPlayersInfo = () =>  {

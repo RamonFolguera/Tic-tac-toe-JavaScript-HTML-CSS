@@ -114,7 +114,7 @@
 }
 
 .buttons-container {
-    width: 50%;
+    width: 90%;
 }
 
 .start-button, .reset-button, .back-button {
@@ -128,13 +128,13 @@
     border: none;
 }
 
-.start-button:hover, .reset-button:hover {
+.start-button:hover, .reset-button:hover, .back-button:hover {
     background-color: rgb(176, 237, 212);
     color: rgb(13, 44, 31);
     cursor:pointer;
 }
 
-.start-button:active {
+.start-button:active, .reset-button:active, .back-button:active {
     box-shadow: none;
 }
 
@@ -194,7 +194,7 @@
     box-shadow: 1px 1px 5px 5px var(--green);
 }
 
-.human, .cpu {
+.cpu {
     padding: 5px 5px;
     background-color: var(--green);
     box-shadow: 1px 1px 1px 1px black;
@@ -205,13 +205,13 @@
     border: none;
 }
 
-.human:hover, .cpu:hover {
+.cpu:hover {
     background-color: rgb(176, 237, 212);
     color: var(--green);
     cursor: pointer;
 }
 
-.human:active, .cpu:active{
+.cpu:active{
     box-shadow: none;
 }
 
@@ -230,9 +230,7 @@
         font-size: 0.8rem;
         display: block;
     }
-
 }
-
 
 @media (min-width: 992px) {
 
@@ -278,7 +276,7 @@
         font-size: 1rem;
     }
     
-    .start-button:hover {
+    .start-button:hover, .back-button:hover {
         background-color: rgb(176, 237, 212);
         color: rgb(13, 44, 31);
         cursor:pointer;
