@@ -222,7 +222,6 @@ const storePlayersInfo = () => {
         return;
 
     }
-    console.log("hola");
     sessionStorage.setItem('playersNames', JSON.stringify(playerInputs));
     sessionStorage.setItem('playerCpu', cpuPlaying);
     sessionStorage.setItem('tokenP1Choice', JSON.stringify(tokensP1));
