@@ -171,7 +171,6 @@ cells.map((cell) => {
             randomCell = Math.floor(Math.random() * 9);
             if (boardCheck[randomCell] === "") {
               cpuCellChoice = document.getElementById(randomCell);
-
               cpuCellChoice.appendChild(player2Token.cloneNode(true));
               panelP1.appendChild(yourTurnPar);
               panelP1.appendChild(player1Token);
@@ -305,7 +304,6 @@ const checkWinner = () => {
         boardCheck[winningComb[i][1]] === "x" &&
         boardCheck[winningComb[i][2]] === "x"
       ) {
-        console.log("what?");
         scoreCounterP1++;
         localStorage.setItem("scoreP1", scoreCounterP1);
         sessionStorage.setItem("tokenWinnerP1", player1Token.id);
