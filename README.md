@@ -32,8 +32,8 @@ Very important to have a fine working responsive system to be able to play on bi
 |I decided to create a tic tac toe with a Jumanji look-alike.| 
 To start with this design, firstly, I created on the main (index) page a box resembling the folded board game similar to Jumanji. Secondly, to add some fun to the USERS EXPERIENCE from the very beginning, I added the option to activate the original drums sound effects from the movie with "WITH MUSIC", which will automatically make the sound play when the user hovers over the game. Not only that but, added also the hovering effect that simulates the game opening and showing up whats inside.|
 |To start the game the player has to click anywhere on the game, as it says on the welcome message.|
-|![image](./img/screenshot1.JPG)|
-|![image](./img/screenshot2.JPG)|
+|![image](./img/tictactoe_gif1.gif)|
+
 
 
 |Players page - Big screen version|
@@ -42,16 +42,16 @@ To start with this design, firstly, I created on the main (index) page a box res
 |We included aswell an option to play against the CPU. When a player chooses to play against the CPU, the latest will place the token selected for it right after the player places theirs. 
 To start the game when you are ready just need to click on START. If you forgot to introduce a name, or select a token, a pop up window will come up and inform you if there is a name or a token selection missing.|
 |Finally, if everything is correct you will start the game!|
-|![image](./img/screenshot4.JPG)|
-|![image](./img/screenshot5.JPG)|
+|![image](./img/tictactoe_gif2.gif)|
+
 
 |Game page - Big screen version|
 |-|
 |The game will always start with Player 1, when it's a Player vs Player. But if it is a Player vs CPU, will always start with the Player, either 1 or 2.|
 |Everytime the turn jumps from one player to another, on the players panel they will see a YOUR TURN message indicating it is their turn. Also their token and their name will show all the time.|
 |To win one player has to manage to place three tokens in line. If all tokens are placed and no one wins, players will have to pick one token and place it again until one of them wins.|
-|![image](./img/screenshot6.JPG)|
-|![image](./img/screenshot7.JPG)|
+|![image](./img/tictactoe_gif3.gif)|
+
 
 |Winner page - Big screen version|
 |-|
@@ -80,13 +80,42 @@ To start the game when you are ready just need to click on START. If you forgot 
 - Mobile-first 
 - JavaScript 
 
-### Autor
+### Author
 
-- Ramón Folguera Carbonell
+- **Ramón**
+<a href="https://github.com/RamonFolguera" target="_blank"><img src="https://img.shields.io/badge/github-24292F?style=for-the-badge&logo=github&logoColor=white" target="_blank"></a>
+
 
 ### License
 
 This project has been created under a MIT License. To learn more about the details go to LICENSE.md.
+
+## Contact
+
+Feel free to contact me anytime, I will be happy to help you with your project or to get me some feedback from you. 
+
+<a href = "mailto:folguera.ramon@gmail.com"><img src="https://img.shields.io/badge/Gmail-C6362C?style=for-the-badge&logo=gmail&logoColor=white" target="_blank"></a>
+<a href="https://www.linkedin.com/in/ram%C3%B3n-folguera-0ab32776/" target="_blank"><img src="https://img.shields.io/badge/-LinkedIn-%230077B5?style=for-the-badge&logo=linkedin&logoColor=white" target="_blank"></a> 
+</p>
+
+
+
+## Thanks:
+
+I want to thank my GeekHub mentors for all the support they have given us everyday:
+
+- **Dani**  
+<a href="https://github.com/Dave86dev" target="_blank"><img src="https://img.shields.io/badge/github-24292F?style=for-the-badge&logo=github&logoColor=white" target="_blank"></a> 
+
+- **Jose**  
+<a href="https://github.com/JoseMarin" target="_blank"><img src="https://img.shields.io/badge/github-24292F?style=for-the-badge&logo=github&logoColor=white" target="_blank"></a> 
+
+- **David**  
+<a href="https://www.github.com/userGithub/" target="_blank"><img src="https://img.shields.io/badge/github-24292F?style=for-the-badge&logo=github&logoColor=red" target="_blank"></a>
+
+- **Mara**  
+<a href="https://github.com/MaraScampini" target="_blank"><img src="https://img.shields.io/badge/github-24292F?style=for-the-badge&logo=github&logoColor=green" target="_blank"></a> 
+
 
 
 
