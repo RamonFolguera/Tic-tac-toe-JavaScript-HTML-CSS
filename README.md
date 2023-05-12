@@ -19,11 +19,11 @@
 
 ### The challenge
 
-For this time, our third project in this bootcamp I am doing with GeeksHubs we are asked to create a Tic-tac-toe.
+For this time, our third project in this bootcamp I did with GeeksHubs we were asked to create a Tic-tac-toe.
 
-We have to include a few html pages to work around with the SessionStorage. There fore we had to include minimum the main one as the index, a game page with the board, a players and a winner one.
+We had to include a few html pages to work around with SessionStorage. Therefore, we had to include at least the main one as the index, a game page with the board, a players and a winner one.
 
-Very important to have a fine working responsive system to be able to play on big screens and small screens, like mobile phones.
+It was very important to have a good working responsive system to be able to play on big screens and small screens.
 
 ### Screenshots
 
